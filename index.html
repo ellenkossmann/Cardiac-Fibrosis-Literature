@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,6 +8,15 @@
   <meta name="theme-color" content="#101211">
   <meta name="description" content="A visual guide to the cells and interactions involved in cardiac fibrosis. A literature project by Ellen Kossmann.">
   <title>Cardiac Fibrosis — A Literature Atlas</title>
+  <script>
+    // Restore the saved theme before the page paints.
+    try {
+      document.documentElement.dataset.theme =
+        localStorage.getItem('theme') === 'light' ? 'light' : 'dark';
+    } catch {
+      document.documentElement.dataset.theme = 'dark';
+    }
+  </script>
   <script src="https://cdn.botpress.cloud/webchat/v3.7/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2026/11/18/14/20261118143459-2UVH7CHO.js" defer></script>
   <style>
@@ -23,6 +33,29 @@
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
     /* Visual abstracts: SVGs in abstracts/<topic-id>.svg replace the placeholder when the file exists */
     .grid .art{aspect-ratio:16/9}.art.has-image{background:#fafaf8}.detail-art.has-image{aspect-ratio:16/9;min-height:0;max-height:none}.art-image{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;object-fit:cover}.art.has-image>:not(.art-image){display:none}.abstract-actions{margin:12px 0 0;text-align:right;font-size:12px;letter-spacing:.4px;color:var(--muted)}.abstract-actions a{border-bottom:1px solid var(--line);padding-bottom:2px}.abstract-actions a:hover{color:var(--ink);border-color:var(--tone)}
+    /* Theme control and light palette */
+    .header{gap:16px}
+    .theme-toggle{background:transparent;border:1px solid var(--line);border-radius:30px;color:var(--ink);padding:9px 15px;font-size:11px;white-space:nowrap;flex-shrink:0}
+    .theme-toggle:hover{background:var(--surface)}
+    :root[data-theme="light"]{color-scheme:light;--bg:#f6f5ef;--surface:#eeeee6;--ink:#242b24;--muted:#60695f;--line:#d4d9ce;--accent:#4b633c}
+    [data-theme="light"] .overview-copy,
+    [data-theme="light"] .paper h3,
+    [data-theme="light"] .summary-label{color:var(--ink)}
+    [data-theme="light"] .paper-meta,
+    [data-theme="light"] .paper-number,
+    [data-theme="light"] .section-line p,
+    [data-theme="light"] .card-meta{color:var(--muted)}
+    [data-theme="light"] .detail-heading .eyebrow,
+    [data-theme="light"] .paper-external,
+    [data-theme="light"] .paper-source-link,
+    [data-theme="light"] .citation-status,
+    [data-theme="light"] .paper-title-link:hover{color:var(--accent)}
+    [data-theme="light"] .filter{border-color:var(--line)}
+    [data-theme="light"] .filter:hover{border-color:var(--accent);color:var(--ink)}
+    [data-theme="light"] .filter[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+    [data-theme="light"] dialog{background:var(--bg);border-color:var(--line)}
+    [data-theme="light"] .dot{background:var(--accent)}
+    @media(max-width:420px){.theme-toggle{padding:8px 11px;font-size:10px}}
   </style>
 </head>
 <body>
@@ -33,11 +66,12 @@
         <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 27S4 20.4 4 11.8C4 5 12.2 3.6 16 9c3.8-5.4 12-4 12 2.8C28 20.4 16 27 16 27Z" stroke="currentColor" stroke-width="1.2"/><path d="M7 16h5l2-5 4 10 2-5h5" stroke="currentColor" stroke-width="1.2"/></svg>
         <span>Cardiac fibrosis<small>A literature atlas</small></span>
       </a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode">Light mode</button>
     </header>
     <main id="main" tabindex="-1"></main>
     <footer class="footer"><a class="footer-brand" href="#/">A closer look at the fibrotic heart.</a><div class="footer-right"><span>Ellen Kossmann · Graphcourse</span><button class="text-button" type="button" data-about>About this project ↗</button></div></footer>
   </div>
-  <dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-top"><h2 id="about-title">About the atlas</h2><button class="close" type="button" aria-label="Close about dialog">×</button></div><p class="dialog-copy">A visual overview of cardiac fibrosis literature, organised by cell type and cell–cell interactions. Each topic brings together a visual abstract, selected papers, and brief summaries.</p><p class="dialog-copy">This first version sets out the collection. Visual abstracts and paper entries will be added as the project develops.</p><p class="dialog-credit">Ellen Kossmann<br>Graphcourse project · 2026</p></dialog>
+  <dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-top"><h2 id="about-title">About the atlas</h2><button class="close" type="button" aria-label="Close about dialog">×</button></div><p class="dialog-copy">A visual overview of cardiac fibrosis literature, organised by cell type and cell–cell interactions. Each topic brings together a visual abstract, selected papers, and brief summaries.</p><p class="dialog-credit">Ellen Kossmann<br>Graphcourse project · 2026</p></dialog>
   <script>
     const topics = [
       {id:'overview',title:'Overview',short:'The bigger picture',desc:'An introduction to the fibrotic heart.',intro:'A starting point for understanding cardiac fibrosis and the cells involved.',type:'context',panel:'#252d24',edge:'#3b4837',tone:'#bfcea7',summary:['Cardiac fibrosis is the accumulation of extracellular matrix in the heart. Scar formation helps repair injury, but persistent or excessive matrix deposition can stiffen the tissue and impair cardiac function.','Fibroblasts produce much of this matrix. Their behaviour is shaped by signals from endothelial cells, immune cells, cardiomyocytes, and the surrounding tissue. This atlas brings these perspectives together.']},
@@ -1297,7 +1331,7 @@
     }
     function renderHome(){
       document.title='Cardiac Fibrosis — A Literature Atlas';
-      main.innerHTML='<section class="hero" aria-labelledby="home-title"><h1 id="home-title" tabindex="-1">Cardiac fibrosis.</h1><p class="hero-copy">A visual guide to the cells and interactions<br class="desktop-break"> shaping the fibrotic heart.</p><div class="filters" role="group" aria-label="Filter topics"><button class="filter" type="button" data-filter="all" aria-pressed="true">All topics <span>06</span></button><button class="filter" type="button" data-filter="context" aria-pressed="false">The bigger picture <span>02</span></button><button class="filter" type="button" data-filter="cell" aria-pressed="false">Cell types <span>04</span></button></div></section><section class="collection" aria-labelledby="collection-title"><div class="section-line"><h2 id="collection-title">Explore the collection</h2><p id="topic-count" role="status" aria-live="polite">06 topics</p></div><div class="grid">'+topics.map((t,i)=>'<a class="topic-card" href="#/'+t.id+'" data-type="'+t.type+'" style="'+palette(t)+'" aria-label="Explore '+t.title+'">'+artwork(t,i)+'<h3 class="card-title"><span class="dot" aria-hidden="true"></span>'+t.title+'</h3><p class="card-desc">'+t.desc+'</p><p class="card-meta">'+(i===0?'An introduction':papersByTopic[t.id]?.length?paperCountLabel(papersByTopic[t.id]):'Selected literature')+'</p></a>').join('')+'</div><div class="bottom-note"><span>One heart. Many cell types. A shared story of remodelling.</span><span>A collection in progress ↗</span></div></section>';
+      main.innerHTML='<section class="hero" aria-labelledby="home-title"><h1 id="home-title" tabindex="-1">Cardiac fibrosis.</h1><p class="hero-copy">A visual guide to the cells and interactions<br class="desktop-break"> shaping the fibrotic heart.</p><div class="filters" role="group" aria-label="Filter topics"><button class="filter" type="button" data-filter="all" aria-pressed="true">All topics <span>06</span></button><button class="filter" type="button" data-filter="context" aria-pressed="false">The bigger picture <span>02</span></button><button class="filter" type="button" data-filter="cell" aria-pressed="false">Cell types <span>04</span></button></div></section><section class="collection" aria-labelledby="collection-title"><div class="section-line"><h2 id="collection-title">Explore the collection</h2><p id="topic-count" role="status" aria-live="polite">06 topics</p></div><div class="grid">'+topics.map((t,i)=>'<a class="topic-card" href="#/'+t.id+'" data-type="'+t.type+'" style="'+palette(t)+'" aria-label="Explore '+t.title+'">'+artwork(t,i)+'<h3 class="card-title"><span class="dot" aria-hidden="true"></span>'+t.title+'</h3><p class="card-desc">'+t.desc+'</p><p class="card-meta">'+(i===0?'An introduction':papersByTopic[t.id]?.length?paperCountLabel(papersByTopic[t.id]):'Selected literature')+'</p></a>').join('')+'</div></section>';
     }
     function papers(topic){
       const entries = papersByTopic[topic.id];
@@ -1331,6 +1365,30 @@
     dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
     window.addEventListener('hashchange',()=>render(true));
     render();
+  </script>
+  <script>
+    (() => {
+      const themeButton = document.getElementById('theme-toggle');
+      const themeColor = document.querySelector('meta[name="theme-color"]');
+
+      function setTheme(theme) {
+        document.documentElement.dataset.theme = theme;
+        const isDark = theme === 'dark';
+        themeButton.textContent = isDark ? 'Light mode' : 'Dark mode';
+        themeButton.setAttribute('aria-label',
+          isDark ? 'Switch to light mode' : 'Switch to dark mode');
+        if (themeColor) themeColor.content = isDark ? '#101211' : '#f6f5ef';
+      }
+
+      setTheme(document.documentElement.dataset.theme === 'light' ? 'light' : 'dark');
+
+      themeButton.addEventListener('click', () => {
+        const nextTheme = document.documentElement.dataset.theme === 'dark'
+          ? 'light' : 'dark';
+        setTheme(nextTheme);
+        try { localStorage.setItem('theme', nextTheme); } catch {}
+      });
+    })();
   </script>
 </body>
 </html>
