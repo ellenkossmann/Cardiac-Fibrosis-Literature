@@ -1,0 +1,1316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101211">
+  <meta name="description" content="A visual guide to the cells and interactions involved in cardiac fibrosis. A literature project by Ellen Kossmann.">
+  <title>Cardiac Fibrosis — A Literature Atlas</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101211;--surface:#191c1a;--ink:#eeeee7;--muted:#a3aaa3;--line:#303630;--accent:#c5d4ac;--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}a{color:inherit;text-decoration:none}button{color:inherit}button,a{touch-action:manipulation}button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}button{cursor:pointer}::selection{background:#c5d4ac;color:#101211}svg{display:block}button svg,a svg{pointer-events:none}[hidden]{display:none!important}
+    .wrap{width:min(1140px,calc(100% - 80px));margin:auto}.skip{position:fixed;left:20px;top:-80px;background:var(--ink);color:var(--bg);padding:14px;z-index:20}.skip:focus{top:16px}.header{height:100px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.brand{display:flex;gap:12px;align-items:center;font-size:15px;font-weight:600;letter-spacing:-.2px}.brand-mark{width:31px;height:31px;color:var(--accent)}.brand small{display:block;font-weight:400;color:var(--muted);font-size:10px;letter-spacing:2.1px;text-transform:uppercase;margin-top:5px}.text-button{color:var(--muted);transition:color .2s}.text-button:hover{color:var(--ink)}.text-button{border:0;background:none;padding:0}
+    .hero{text-align:center;padding:76px 0 48px}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:2.5px;line-height:1.7;color:var(--accent);margin:0 0 21px}.hero h1{font-family:var(--serif);font-size:clamp(52px,7.3vw,92px);font-weight:400;letter-spacing:-4px;line-height:1.1;margin:0 0 22px}.hero-copy{max-width:445px;margin:auto;font-size:14px;line-height:1.8;color:var(--muted)}.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-top:32px}.filter{padding:10px 18px;border:1px solid #3a403a;border-radius:30px;background:transparent;font-size:11px;color:var(--muted);transition:background .2s,color .2s,border .2s}.filter:hover{border-color:#798471;color:var(--ink)}.filter[aria-pressed="true"]{background:var(--accent);color:#1e281b;border-color:var(--accent)}.filter span{font-size:9px;margin-left:7px;opacity:.65}
+    .collection{padding:16px 0 80px}.section-line{display:flex;align-items:center;justify-content:space-between;margin-bottom:23px}.section-line h2{font-size:11px;font-weight:400;color:var(--muted);letter-spacing:.4px;margin:0}.section-line p{color:#929b91;font-size:10px;letter-spacing:1.3px;text-transform:uppercase;margin:0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px 25px}.topic-card{display:block;min-width:0}.art{position:relative;aspect-ratio:1.49;background:var(--panel);border:1px solid var(--edge);border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;transition:transform .25s,border-color .25s}.art-label{position:absolute;top:19px;left:21px;font-size:9px;letter-spacing:1.9px;color:var(--tone);opacity:.8}.art-number{position:absolute;right:20px;top:17px;font-family:var(--serif);font-size:17px;color:var(--tone);opacity:.65}.placeholder{display:flex;flex-direction:column;align-items:center;gap:12px;color:var(--tone)}.placeholder-icon{width:45px;height:37px;opacity:.6}.placeholder-title{font-family:var(--serif);font-size:22px;font-weight:400;letter-spacing:-.5px}.placeholder-note{font-size:8px;text-transform:uppercase;letter-spacing:2px;opacity:.7}.art-corner{position:absolute;width:34px;height:34px;border-bottom:1px solid var(--edge);border-left:1px solid var(--edge);bottom:17px;left:19px}.art-arrow{position:absolute;bottom:18px;right:19px;color:var(--tone);opacity:.5;transition:transform .2s,opacity .2s}.topic-card:hover .art{transform:translateY(-3px);border-color:var(--tone)}.topic-card:hover .art-arrow{transform:translate(2px,-2px);opacity:1}.card-title{display:flex;align-items:center;gap:10px;margin:18px 1px 7px;font-weight:400;font-size:17px;letter-spacing:-.3px}.dot{width:5px;height:5px;background:var(--tone);border-radius:100%;flex-shrink:0}.card-desc{margin:0 1px;color:var(--muted);font-size:11px;line-height:1.7}.card-meta{margin:10px 1px 0;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#969e95}.bottom-note{border-top:1px solid var(--line);padding:25px 0 0;margin:43px 0 0;display:flex;justify-content:space-between;gap:20px;font-size:11px;line-height:1.8;color:var(--muted)}.bottom-note span:last-child{color:var(--accent);white-space:nowrap}.footer{border-top:1px solid var(--line);padding:26px 0 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:10px}.footer-brand{font-family:var(--serif);font-size:17px;letter-spacing:-.5px;color:var(--ink)}.footer-right{display:flex;gap:22px;align-items:center}.footer .text-button{font-size:10px}
+    .detail{padding:32px 0 80px}.breadcrumbs{display:flex;align-items:center;gap:12px;font-size:10px;color:var(--muted)}.breadcrumbs a:hover{color:var(--ink)}.detail-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin:48px 0 30px}.detail-heading h1{font-family:var(--serif);font-size:clamp(40px,5.6vw,66px);font-weight:400;line-height:1.08;letter-spacing:-2.5px;margin:0 0 17px;max-width:800px}.detail-heading .eyebrow{color:var(--tone);margin-bottom:16px}.detail-intro{color:var(--muted);font-size:14px;line-height:1.8;max-width:650px;margin:0}.chapter{flex-shrink:0;color:var(--muted);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;line-height:1.8;text-align:right}.detail-art{aspect-ratio:2.85;min-height:250px;max-height:410px}.detail-art .placeholder-icon{width:59px;height:48px}.detail-art .placeholder-title{font-size:31px}.detail-art .placeholder-note{font-size:9px}.detail-body{max-width:810px;margin:48px auto 0}.content-header{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:22px}.content-header h2{font-family:var(--serif);font-size:30px;font-weight:400;letter-spacing:-.8px;margin:0}.status{font-size:9px;color:var(--muted);border:1px solid var(--line);padding:7px 10px;border-radius:20px;white-space:nowrap}.overview-copy{color:#b7beb6;font-size:15px;line-height:1.95}.overview-copy p{margin:0 0 18px}.paper-note{font-size:12px;line-height:1.8;color:var(--muted);margin:0 0 26px}.paper{display:grid;grid-template-columns:38px 1fr;gap:17px;border-top:1px solid var(--line);padding:27px 0}.paper-number{font-family:var(--serif);font-size:21px;color:#929e88;padding-top:2px}.paper h3{line-height:1.4;font-family:var(--serif);font-size:23px;letter-spacing:-.3px;font-weight:400;margin:0 0 10px;color:#c4ccc0}.paper-title-link:hover{color:var(--tone)}.paper-external{display:inline-flex;margin-left:4px;color:var(--tone);vertical-align:baseline}.paper-external svg{width:12px;height:12px}.paper-source-link{color:var(--tone);text-decoration:underline;text-underline-offset:3px}.paper-source-link:hover{color:var(--ink)}.citation-status{color:var(--tone);border-bottom:1px dashed currentColor;padding-bottom:2px}.paper-meta{color:#a5aea0;font-size:9px;letter-spacing:1.1px;text-transform:uppercase;line-height:1.7;margin:0 0 14px}.paper-summary{font-size:12px;line-height:1.85;color:var(--muted);margin:0;max-width:600px}.summary-label{color:#c0c8bb}.chapter-nav{border-top:1px solid var(--line);margin-top:44px;padding-top:25px;display:flex;justify-content:space-between;gap:25px}.chapter-nav a{display:flex;align-items:center;gap:12px;font-size:12px;line-height:1.8}.chapter-nav a:hover{color:var(--accent)}.chapter-nav small{display:block;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1.4px}.next-chapter{text-align:right;margin-left:auto}.empty{padding:90px 0;text-align:center}.empty h1{font-family:var(--serif);font-size:44px;font-weight:400}.empty a{color:var(--accent);text-decoration:underline}h1:focus{outline:0}
+    dialog{background:#1a1f1b;border:1px solid #46503f;border-radius:12px;color:var(--ink);padding:38px;max-width:490px;width:calc(100% - 40px);box-shadow:0 24px 100px #0008}dialog::backdrop{background:#000b;backdrop-filter:blur(5px)}.dialog-top{display:flex;justify-content:space-between;align-items:center;gap:20px}.dialog-top h2{font-family:var(--serif);font-size:31px;font-weight:400;margin:0}.close{border:1px solid var(--line);border-radius:100%;width:31px;height:31px;background:transparent;font-size:20px;display:grid;place-items:center}.dialog-copy{font-size:13px;line-height:1.9;color:var(--muted);margin:23px 0 0}.dialog-credit{font-size:10px;line-height:1.8;color:var(--accent);padding-top:22px;margin:22px 0 0;border-top:1px solid var(--line)}
+    @media(min-width:1600px){.hero{padding-top:90px}.hero h1{font-size:98px}}@media(max-width:900px){.wrap{width:calc(100% - 48px)}.grid{gap:30px 20px}.placeholder-title{font-size:19px}.art-label{font-size:8px;left:16px;top:16px}.art-number{right:16px;top:13px}.card-title{font-size:15px}.chapter{display:none}.hero h1{letter-spacing:-2.5px}.detail-art{aspect-ratio:2.4}}
+    @media(max-width:700px){.header{height:83px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:29px 18px}.hero{padding:55px 0 40px}.hero h1{font-size:61px;letter-spacing:-3px}.hero-copy{font-size:13px;max-width:340px}.eyebrow{font-size:8px;letter-spacing:2px}.art{aspect-ratio:1.25}.art-label{font-size:7px;letter-spacing:1.4px}.art-number{font-size:15px}.placeholder-title{font-size:20px}.placeholder-icon{width:36px;height:29px}.placeholder-note{font-size:7px;letter-spacing:1.6px}.art-arrow{width:15px;right:14px;bottom:14px}.art-corner{width:23px;height:23px;bottom:14px;left:15px}.card-title{font-size:15px;line-height:1.4;align-items:baseline;gap:8px}.card-desc{font-size:10px}.card-meta{font-size:8px}.collection{padding-bottom:48px}.bottom-note{font-size:10px}.bottom-note span:last-child{display:none}.footer{align-items:flex-start}.footer-right{flex-direction:column;align-items:flex-end;gap:11px}.detail-heading{margin-top:37px}.detail-heading h1{font-size:45px;letter-spacing:-1.9px}.detail-intro{font-size:13px}.detail-art{aspect-ratio:1.8;min-height:230px}.detail-body{margin-top:35px}.content-header h2{font-size:27px}.paper{grid-template-columns:25px 1fr;gap:12px}.paper h3{font-size:22px}.chapter-nav a{font-size:11px}.detail{padding-bottom:50px}}
+    @media(max-width:420px){.wrap{width:calc(100% - 36px)}.brand{font-size:13px;gap:9px}.brand-mark{width:27px;height:27px}.brand small{font-size:8px;letter-spacing:1.8px}.hero h1{font-size:49px;letter-spacing:-2.4px}.hero .eyebrow{font-size:7px}.filter{padding:9px 13px;font-size:10px}.filters{gap:7px}.grid{grid-template-columns:1fr;gap:30px}.art{aspect-ratio:1.6}.placeholder-title{font-size:25px}.placeholder-icon{width:44px;height:35px}.art-label{font-size:8px;top:19px;left:20px}.art-number{right:20px;top:16px}.card-title{font-size:18px}.card-desc{font-size:12px}.card-meta{font-size:9px}.detail-art{aspect-ratio:1.5}.content-header{align-items:flex-start;flex-direction:column;gap:13px}.detail-heading h1{font-size:40px}.chapter-nav{gap:18px}.chapter-nav svg{width:14px;flex-shrink:0}.chapter-nav a{max-width:47%}.footer-brand{font-size:15px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header class="header">
+      <a class="brand" href="#/" aria-label="Cardiac fibrosis atlas home">
+        <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 27S4 20.4 4 11.8C4 5 12.2 3.6 16 9c3.8-5.4 12-4 12 2.8C28 20.4 16 27 16 27Z" stroke="currentColor" stroke-width="1.2"/><path d="M7 16h5l2-5 4 10 2-5h5" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span>Cardiac fibrosis<small>A literature atlas</small></span>
+      </a>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="footer"><a class="footer-brand" href="#/">A closer look at the fibrotic heart.</a><div class="footer-right"><span>Ellen Kossmann · Graphcourse</span><button class="text-button" type="button" data-about>About this project ↗</button></div></footer>
+  </div>
+  <dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-top"><h2 id="about-title">About the atlas</h2><button class="close" type="button" aria-label="Close about dialog">×</button></div><p class="dialog-copy">A visual overview of cardiac fibrosis literature, organised by cell type and cell–cell interactions. Each topic brings together a visual abstract, selected papers, and brief summaries.</p><p class="dialog-copy">This first version sets out the collection. Visual abstracts and paper entries will be added as the project develops.</p><p class="dialog-credit">Ellen Kossmann<br>Graphcourse project · 2026</p></dialog>
+  <script>
+    const topics = [
+      {id:'overview',title:'Overview',short:'The bigger picture',desc:'An introduction to the fibrotic heart.',intro:'A starting point for understanding cardiac fibrosis and the cells involved.',type:'context',panel:'#252d24',edge:'#3b4837',tone:'#bfcea7',summary:['Cardiac fibrosis is the accumulation of extracellular matrix in the heart. Scar formation helps repair injury, but persistent or excessive matrix deposition can stiffen the tissue and impair cardiac function.','Fibroblasts produce much of this matrix. Their behaviour is shaped by signals from endothelial cells, immune cells, cardiomyocytes, and the surrounding tissue. This atlas brings these perspectives together.']},
+      {id:'interactions',title:'How cell types interact',short:'Cell–cell interactions',desc:'Signals that connect the cardiac niche.',intro:'Explore how communication between cells shapes repair and fibrosis.',type:'context',panel:'#28282d',edge:'#41404a',tone:'#c2b8d5'},
+      {id:'endothelial-cells',title:'Endothelial cells',short:'ECs',desc:'The vascular perspective on fibrosis.',intro:'Explore the role of the cardiac endothelium in tissue injury, repair, and remodelling.',type:'cell',panel:'#202c2c',edge:'#344848',tone:'#a5c7c7'},
+      {id:'monocytes-macrophages',title:'Monocytes & macrophages',short:'Monocytes / Macrophages',desc:'Immune cells in injury and repair.',intro:'Explore how monocytes and macrophages participate in cardiac inflammation, repair, and fibrosis.',type:'cell',panel:'#302820',edge:'#4b4033',tone:'#d4b99a'},
+      {id:'cardiomyocytes',title:'Cardiomyocytes',short:'Cardiomyocytes',desc:'The working heart under stress.',intro:'Explore how cardiomyocyte injury and stress connect to fibrotic remodelling.',type:'cell',panel:'#302526',edge:'#4d373a',tone:'#d2acaf'},
+      {id:'fibroblasts',title:'Fibroblasts',short:'Fibroblasts',desc:'The cells that build and reshape matrix.',intro:'Explore fibroblast states, activation, and extracellular matrix remodelling.',type:'cell',panel:'#2a2b21',edge:'#444635',tone:'#c8c7a0'}
+    ];
+    const papersByTopic = {
+      'interactions': [
+        {
+          "title": "Single-nucleus RNA sequencing in ischemic cardiomyopathy reveals common transcriptional profile underlying end-stage heart failure",
+          "authors": "Simonson et al.",
+          "journal": "Cell Reports",
+          "year": 2023,
+          "summary": "Single-nucleus RNA sequencing compared non-infarcted left ventricle from end-stage ischaemic cardiomyopathy (ICM) with non-failing donor hearts, alongside published HCM and DCM data. Fibroblasts had the most changed genes, with higher matrix and collagen programmes that matched histological fibrosis. Predicted communication from endothelial cells, especially endocardial and angiogenic subtypes, increased in ICM, notably laminin, CDH5, JAM and collagen signalling. CCL21⁺ lymphatic endothelial cells expanded and clustered in fibrotic regions. All the signalling links are computational predictions.",
+          "url": "https://doi.org/10.1016/j.celrep.2023.112086"
+        },
+        {
+          "title": "Single-cell transcriptomics reveals cell-type-specific diversification in human heart failure",
+          "authors": "Koenig et al.",
+          "journal": "Nature Cardiovascular Research",
+          "year": 2022,
+          "summary": "This single-cell atlas compared left ventricles from non-ischaemic dilated cardiomyopathy (DCM) with donor hearts. Fibroblasts in DCM took on an activated, matrix-producing profile (POSTN, MEOX1/2), and a CCL2-expressing fibroblast subset expanded between cardiomyocytes. Resident macrophage signatures fell while monocyte-derived inflammatory macrophage states expanded. Vascular endothelial cells did not form new states but shifted their expression, including VEGF-A/C, APLNR and SMAD3. The study is observational, with no ligand–receptor or functional experiments.",
+          "url": "https://doi.org/10.1038/s44161-022-00028-6"
+        },
+        {
+          "title": "Spatial multi-omic map of human myocardial infarction",
+          "authors": "Kuppe et al.",
+          "journal": "Nature",
+          "year": 2022,
+          "summary": "Single-nucleus, chromatin and spatial transcriptomics were combined to map human hearts across control, remote, border, ischaemic and fibrotic zones after MI. Myeloid cells and fibroblasts were spatially co-dependent, and SPP1⁺ macrophages sat next to POSTN⁺ myofibroblasts, which was confirmed by in situ staining. PDGF-C/D, THBS1 and TGF-β1 were predicted as signals between them. Mouse lineage tracing supported fibroblasts becoming myofibroblasts, and RUNX1 overexpression promoted this transition in culture.",
+          "url": "https://doi.org/10.1038/s41586-022-05060-x"
+        },
+        {
+          "title": "Cells of the adult human heart",
+          "authors": "Litviňuková et al.",
+          "journal": "Nature",
+          "year": 2020,
+          "summary": "This single-cell atlas covered six regions of the healthy adult human heart and predicted the networks that operate at baseline. A FB4 fibroblast population rich in FN1, COL4A1 and TNC was predicted to signal through different integrins on atrial and ventricular cardiomyocytes. Macrophages were predicted to signal to fibroblasts through MIF–CD74, and an immune-like endothelial population expressed CX3CL1, CCL2, IL6 and ICAM1. There is no disease cohort, and the interactions are predictions with limited spatial support.",
+          "url": "https://doi.org/10.1038/s41586-020-2797-4"
+        },
+        {
+          "title": "Cardiac fibroblast BAG3 regulates TGFBR2 signaling and fibrosis in dilated cardiomyopathy",
+          "authors": "Wang et al.",
+          "journal": "Journal of Clinical Investigation",
+          "year": 2025,
+          "summary": "Using hiPSC-derived engineered heart tissue with cell-type-specific BAG3 knockout, BAG3 loss in fibroblasts alone reduced contractile force and increased collagen. BAG3 normally binds TGFBR2 and sends it for proteasomal degradation, so BAG3-deficient fibroblasts kept more receptor and became hypersensitive to TGF-β on soft substrates. BAG3-knockout cardiomyocytes secreted more TGF-β1, a possible cardiomyocyte-to-fibroblast route that was not tested in co-culture. Human DCM hearts carrying BAG3 variants showed increased fibrosis, and the disease-causing E455K variant failed to rescue TGFBR2 turnover.",
+          "url": "https://doi.org/10.1172/JCI181630"
+        },
+        {
+          "title": "Cardiac fibroblasts regulate the development of heart failure via Htra3-TGF-β-IGFBP7 axis",
+          "authors": "Ko et al.",
+          "journal": "Nature Communications",
+          "year": 2022,
+          "summary": "HTRA3 is a fibroblast-restricted protease that binds and degrades mature TGF-β1. Pressure overload, stretch and human heart failure all lower it. Htra3 loss plus TAC pushed cardiomyocytes into a failing state with DNA damage, p53 activation and a NOX4-dependent secretory programme (IGFBP7, TGF-β3, LTBP4). Nox4 knockdown, TGF-β neutralisation and AAV9-Htra3 each reduced dysfunction and fibrosis in mice. In patients, plasma IGFBP7 rose with heart-failure severity and fell after transplantation.",
+          "url": "https://doi.org/10.1038/s41467-022-30630-y"
+        },
+        {
+          "title": "Loss of Yap/Taz in cardiac fibroblasts attenuates adverse remodelling and improves cardiac function",
+          "authors": "Mia et al.",
+          "journal": "Cardiovascular Research",
+          "year": 2022,
+          "summary": "Yap and Taz moved into the nucleus in myofibroblasts after MI in mice. Deleting them specifically in fibroblasts reduced myofibroblast genes, collagen and scar size and preserved function, while constitutively active Yap had the opposite effect. Yap/Taz–TEAD directly switched on the IL33 promoter, and IL-33–ST2 signalling drove both fibroblast activation and inflammatory macrophage genes. Fibroblast Yap/Taz loss also reduced macrophage recruitment, and conditioned medium from these fibroblasts dampened macrophage migration and M1 genes.",
+          "url": "https://doi.org/10.1093/cvr/cvab205"
+        },
+        {
+          "title": "High-resolution transcriptomic profiling of the heart during chronic stress reveals cellular drivers of cardiac fibrosis and hypertrophy",
+          "authors": "McLellan et al.",
+          "journal": "Circulation",
+          "year": 2020,
+          "summary": "This single-cell study profiled mouse hearts after two weeks of angiotensin II infusion. Two fibroblast states almost absent at baseline (Cilp⁺ and Thbs4⁺) expanded and became the main matrix producers, without being classical ACTA2⁺ myofibroblasts or proliferating. Predicted signalling increased in every cell type, with fibroblasts gaining the most connections; cardiomyocytes were the main VEGFA source and epicardial cells the main CSF1 source for macrophages. Fibrosis rose in both sexes, but ejection fraction fell only in males.",
+          "url": "https://doi.org/10.1161/CIRCULATIONAHA.119.045115"
+        },
+        {
+          "title": "Single-cell expression profiling reveals dynamic flux of cardiac stromal, vascular and immune cells in health and injury",
+          "authors": "Farbehi et al.",
+          "journal": "eLife",
+          "year": 2019,
+          "summary": "Single-cell sequencing of mouse interstitial cells at days 3 and 7 after MI mapped how fibroblast, myofibroblast and macrophage populations shift during injury. Myofibroblasts and inflammatory macrophages sent the most predicted signals, while endothelial cells were by far the main receivers. A WNT-antagonist fibroblast state (F-WntX) was predicted to signal to endothelial cells through PTN, MYOC and TIMP3. Myofibroblasts split into pro-fibrotic and anti-fibrotic subtypes. The interactions are computational predictions supported by imaging of fibroblasts next to vessels.",
+          "url": "https://doi.org/10.7554/eLife.43882"
+        },
+        {
+          "title": "Cold and hot fibrosis define clinically distinct cardiac pathologies",
+          "authors": "Miyara et al.",
+          "journal": "Cell Systems",
+          "year": 2025,
+          "summary": "This study modelled the macrophage–myofibroblast circuit across mouse, pig and human injury. After MI, macrophages fall back to baseline while myofibroblasts persist, a pattern it calls “cold” fibrosis, unlike the “hot” macrophage-rich fibrosis around foreign bodies. A myofibroblast autocrine TIMP1 loop (likely via LRP1) sustained proliferation, and blocking TIMP1 reduced proliferating myofibroblasts and scar burden in vivo without improving systolic function. In pigs, recombinant Agrin brought both cell populations back to baseline with less fibrosis.",
+          "url": "https://doi.org/10.1016/j.cels.2025.101198"
+        },
+        {
+          "title": "Macrophage-derived CCL24 promotes cardiac fibrosis via fibroblast CCR3",
+          "authors": "Parthiban et al.",
+          "journal": "Circulation Research",
+          "year": 2025,
+          "summary": "Under pressure overload, resident cardiac macrophages were the only source of CCL24, induced by IL-4 plus IL-10. CCL24 acted on CCR3, which is most highly expressed on fibroblasts, to drive proliferation, myofibroblast conversion and collagen through PI3K–Akt. Global CCL24 knockout, CCL24-blocking antibody, fibroblast-specific CCR3 knockdown and a CCR3 antagonist each improved function and reduced fibrosis after TAC. Immune cell recruitment was largely unchanged, pointing to a direct macrophage-to-fibroblast effect.",
+          "url": "https://doi.org/10.1161/CIRCRESAHA.125.326599"
+        },
+        {
+          "title": "DNMT3A clonal hematopoiesis-driver mutations induce cardiac fibrosis by paracrine activation of fibroblasts",
+          "authors": "Shumliakivska et al.",
+          "journal": "Nature Communications",
+          "year": 2024,
+          "summary": "Monocytes from people with DNMT3A clonal haematopoiesis (CHIP) were predicted to signal more strongly to cardiac fibroblasts, with EGF-family signals dominating. DNMT3A-silenced monocytes secreted more HB-EGF, which activated fibroblasts through EGFR–Akt. Gefitinib or HB-EGF neutralisation prevented this. Mice given DNMT3A-mutant bone marrow developed more remote-zone fibrosis after MI, and human CHIP carriers showed MRI signs of diffuse fibrosis.",
+          "url": "https://doi.org/10.1038/s41467-023-43003-w"
+        },
+        {
+          "title": "Human pericardial macrophages suppress cardiac fibrosis through cystatin C signaling after myocardial infarction",
+          "authors": "Fatehi Hassanabad et al.",
+          "journal": "JCI Insight",
+          "year": 2026,
+          "summary": "Immune cells from human pericardial fluid blunted TGF-β1-driven fibroblast activation. Cells from patients without coronary disease did this better than cells from recent-MI patients. The effect came from FN1⁺ pericardial macrophages, worked across a Transwell, and was abolished by blocking cystatin C (CST3), which MI macrophages secreted less of. In mice, deleting Cst3 in myeloid cells increased border-zone fibrosis and worsened function by day 28, though this approach could not isolate pericardial macrophages specifically.",
+          "url": "https://doi.org/10.1172/jci.insight.202383"
+        },
+        {
+          "title": "The protective role of GATA6⁺ pericardial macrophages in pericardial inflammation",
+          "authors": "Hughes et al.",
+          "journal": "iScience",
+          "year": 2024,
+          "summary": "Depleting GATA6⁺ pericardial macrophages in mice worsened eosinophilic pericarditis, with more granulocytes in the pericardium but not the myocardium. After MI, whole-heart fibrosis was higher without them, but no individual region (infarct, border or remote) differed and cardiac function was unchanged. The authors could not reproduce the earlier remote-zone protection reported by Deniset et al. (ref 20). In co-culture, GATA6⁺ macrophages did not provoke inflammatory fibroblast responses and lowered fibroblast α-SMA.",
+          "url": "https://doi.org/10.1016/j.isci.2024.110244"
+        },
+        {
+          "title": "Macrophages in the infarcted heart acquire a fibrogenic phenotype, expressing matricellular proteins, but do not undergo fibroblast conversion",
+          "authors": "Li et al.",
+          "journal": "Journal of Molecular and Cellular Cardiology",
+          "year": 2024,
+          "summary": "Lineage tracing of CX3CR1⁺ macrophages after MI found that they made up under 1% of fibroblasts and did not become endothelial, myofibroblast or mural cells. Infarct macrophages did express matrix-related proteins, especially osteopontin (SPP1), thrombospondin-1 and fibronectin, and pro-fibrotic mediators such as TGF-β1 and PDGF-B. Fibroblasts remained the dominant source of fibrillar collagens in both mouse and reused human datasets. Macrophages therefore shape the matrix through secretion rather than by converting into fibroblasts.",
+          "url": "https://doi.org/10.1016/j.yjmcc.2024.07.010"
+        },
+        {
+          "title": "MicroRNA-21–dependent macrophage-to-fibroblast signaling determines the cardiac response to pressure overload",
+          "authors": "Ramanujam et al.",
+          "journal": "Circulation",
+          "year": 2021,
+          "summary": "miR-21 was the most abundant microRNA in cardiac macrophages and rose after TAC. Deleting it in macrophages prevented fibrosis and hypertrophy and preserved function, shifting macrophages toward a proliferative M2-like state. Predicted macrophage-to-fibroblast signalling, mainly from M1-like macrophages to Postn⁺ fibroblasts, was the most repressed. In co-culture, activated macrophages drove myofibroblast conversion, which miR-21 inhibition reduced.",
+          "url": "https://doi.org/10.1161/CIRCULATIONAHA.120.050682"
+        },
+        {
+          "title": "Cardiac resident macrophages prevent fibrosis and stimulate angiogenesis",
+          "authors": "Revelo et al.",
+          "journal": "Circulation Research",
+          "year": 2021,
+          "summary": "Under pressure overload, depleting resident macrophages with an anti-CD115 antibody worsened fibrosis and blunted the rise in microvascular density. CCR2-knockout mice, which lack recruited macrophages, had the least fibrosis, supporting a pro-fibrotic role for recruited cells. Cardiac macrophages secreted TGF-β1 and IL-10, both of which stimulated myofibroblast differentiation and collagen in vitro, and VEGF-A, which drove endothelial tube formation. Resident and recruited macrophages therefore have opposing roles.",
+          "url": "https://doi.org/10.1161/CIRCRESAHA.121.319737"
+        },
+        {
+          "title": "Resident cardiac macrophages mediate adaptive myocardial remodeling",
+          "authors": "Wong et al.",
+          "journal": "Immunity",
+          "year": 2021,
+          "summary": "In a genetic mouse model of dilated cardiomyopathy, resident CCR2⁻ macrophages formed stable physical contacts with cardiomyocytes, with FAK at the contact sites and no classical junctions. Mechanical stretch induced Igf1, Hbegf and Cyr61 in these macrophages through TRPV4. Depleting them reduced adaptive remodelling, coronary growth and survival, and after pressure overload it worsened fibrosis and systolic function. Resident macrophages therefore act as protective mechanosensors.",
+          "url": "https://doi.org/10.1016/j.immuni.2021.07.003"
+        },
+        {
+          "title": "A network of macrophages supports mitochondrial homeostasis in the heart",
+          "authors": "Nicolás-Ávila et al.",
+          "journal": "Cell",
+          "year": 2020,
+          "summary": "Cardiomyocytes eject mitochondria-containing particles called exophers, which resident macrophages take up through MERTK and break down. Exopher release depends on cardiomyocyte autophagy and increases with stress. When macrophages are depleted or MERTK is missing, free mitochondria build up, the inflammasome is activated, and cardiomyocyte metabolism and function decline. Fibrosis was not measured, so the paper defines a homeostatic cardiomyocyte–macrophage axis.",
+          "url": "https://doi.org/10.1016/j.cell.2020.08.031"
+        },
+        {
+          "title": "Gata6⁺ pericardial cavity macrophages relocate to the injured heart and prevent cardiac fibrosis",
+          "authors": "Deniset et al.",
+          "journal": "Immunity",
+          "year": 2019,
+          "summary": "GATA6⁺ macrophages were the most abundant immune cell in the mouse pericardial cavity and were also present in pig and human pericardial fluid. After MI, they left the pericardial fluid and entered the infarcted region independently of CCR2, losing GATA6 as they went in. Mice with an intact pericardium had less stiff ventricles, and deleting Gata6 in myeloid cells increased interstitial fibrosis in the remote myocardium and ventricular stiffness. The anti-fibrotic mediator was not identified, and fibroblasts were not studied directly.",
+          "url": "https://doi.org/10.1016/j.immuni.2019.06.010"
+        },
+        {
+          "title": "Immunoregulatory endothelial cells interact with T cells after myocardial infarction",
+          "authors": "Tombor et al.",
+          "journal": "Circulation Research",
+          "year": 2025,
+          "summary": "A hybrid endothelial state expressing myeloid genes and high MHC-II (IMECs) appeared on day 1 after MI and arose from pre-existing endothelial cells, not bone marrow. These cells were predicted to receive IL-1β/TNF from myeloid cells, TGF-β2 from mural cells and fibroblasts, and IFN-γ from T/NK cells. That cytokine combination reproduced the state in vitro. IMEC-like cells activated T cells largely through IL-6/IL-12 rather than MHC-II. Deleting the IFN-γ receptor in endothelial cells reduced infarct size and fibrosis and improved function.",
+          "url": "https://doi.org/10.1161/CIRCRESAHA.125.326145"
+        },
+        {
+          "title": "Spatiotemporal signaling underlies progressive vascular rarefaction in myocardial infarction",
+          "authors": "Tung et al.",
+          "journal": "Nature Communications",
+          "year": 2023,
+          "summary": "This mouse MI time course followed mural cells and vessels from day 3 to day 42. Pericytes proliferated early, and an activated pericyte state upregulated matrix genes and PDGFA, while vessel density and pericyte coverage declined progressively, with loss of perfusion. Lineage tracing found no conversion between fibroblasts and mural cells in either direction. Spatial transcriptomics predicted pro-angiogenic VEGF-A/B coming from the remote zone and anti-angiogenic, pro-fibrotic signals (THBS1, ANGPT2, TGF-β) from the infarct itself.",
+          "url": "https://doi.org/10.1038/s41467-023-44227-6"
+        },
+        {
+          "title": "Mapping the cardiac vascular niche in heart failure",
+          "authors": "Peisker et al.",
+          "journal": "Nature Communications",
+          "year": 2022,
+          "summary": "Using pressure overload and six fate-tracing mouse lines, this study mapped the vascular and perivascular niche. A matrix-producing fibroblast subtype (ECM-Fib, THBS4⁺) expanded and became the main collagen source, with TEAD1 predicted and partly confirmed as a driver. Fate-traced endothelial cells kept low matrix-gene expression and showed no lasting endothelial-to-mesenchymal transition. Cycling endothelial cells rose at 2 weeks and fell below baseline by 4 weeks. Pericytes upregulated collagen genes, but very few produced collagen in situ.",
+          "url": "https://doi.org/10.1038/s41467-022-30682-0"
+        },
+        {
+          "title": "Myofibroblast-derived exosome induce cardiac endothelial cell dysfunction",
+          "authors": "Ranjan et al.",
+          "journal": "Frontiers in Cardiovascular Medicine",
+          "year": 2021,
+          "summary": "TGF-β1-activated cardiac fibroblasts released more exosomes with altered microRNA content, including more miR-200a-3p. These exosomes impaired cardiac endothelial tube formation, migration and survival, and lowered VEGF-A, PlGF, angiopoietin-1 and eNOS. Blocking miR-200a-3p in the donor fibroblasts restored these endothelial readouts. The work is in vitro only, using neonatal rat and adult mouse cells.",
+          "url": "https://doi.org/10.3389/fcvm.2021.676267"
+        },
+        {
+          "title": "miR-24-3p secreted as extracellular vesicle cargo by cardiomyocytes inhibits fibrosis in human cardiac microtissues",
+          "authors": "Senesi et al.",
+          "journal": "Cardiovascular Research",
+          "year": 2025,
+          "summary": "Using human iPSC-derived cardiomyocytes, cardiac fibroblasts, 3D microtissues and heart slices, this study showed that cardiomyocyte vesicles carry miR-24-3p. This cargo blocks TGF-β1-driven fibroblast activation by suppressing FURIN, CCND1 and SMAD4. Lowering miR-24-3p in either the cardiomyocytes or the receiving fibroblasts, or blocking vesicle release or uptake, abolished the protection. Ischaemia-like conditions depleted this cargo, and circulating vesicles from STEMI patients contained less miR-24-3p.",
+          "url": "https://doi.org/10.1093/cvr/cvae243"
+        },
+        {
+          "title": "Senescent cardiomyocytes contribute to cardiac dysfunction following myocardial infarction",
+          "authors": "Redgrave et al.",
+          "journal": "npj Aging",
+          "year": 2023,
+          "summary": "This mouse ischaemia–reperfusion study tested whether senescent cardiomyocytes drive harmful remodelling. Deleting p16 specifically in cardiomyocytes reduced senescent cardiomyocytes, shrank the scar and improved ejection fraction, without changing hypertrophy. Myocardial IL-6 also fell, as did senescent interstitial cells in the myofibroblast-rich peri-infarct region. Paracrine spread of senescence to fibroblasts is suggested but was not directly shown.",
+          "url": "https://doi.org/10.1038/s41514-023-00113-5"
+        },
+        {
+          "title": "Cardiomyocyte NOX4 regulates resident macrophage-mediated inflammation and diastolic dysfunction in stress cardiomyopathy",
+          "authors": "Vendrov et al.",
+          "journal": "Redox Biology",
+          "year": 2023,
+          "summary": "In isoproterenol-induced stress cardiomyopathy, cardiomyocyte NOX4 raised mitochondrial oxidative stress and inflammasome-dependent IL-18. This went together with expansion of pro-fibrotic resident macrophage subsets and a COL1A1-high pro-myofibroblast population. Cardiomyocyte Nox4 deletion or the NOX4 inhibitor GKT137831 reduced interstitial fibrosis and preserved diastolic function. Because no cardiomyocyte necrosis was detected, the fibrosis was reactive rather than replacement scarring.",
+          "url": "https://doi.org/10.1016/j.redox.2023.102937"
+        },
+        {
+          "title": "Cardiomyocytes stimulate angiogenesis after ischemic injury in a ZEB2-dependent manner",
+          "authors": "Gladka et al.",
+          "journal": "Nature Communications",
+          "year": 2021,
+          "summary": "ZEB2 is induced in injured cardiomyocytes after MI in mice and in human ischaemic hearts. Cardiomyocyte Zeb2 deletion enlarged infarcts, reduced vessel density and worsened function. Secretome screening identified thymosin β4 and prothymosin α as ZEB2-dependent factors that promote endothelial migration and angiogenic gene expression. Therapeutic AAV9-Zeb2 increased these factors and vessel density and improved function after MI.",
+          "url": "https://doi.org/10.1038/s41467-020-20361-3"
+        },
+        {
+          "title": "Macrophage-produced VEGFC is induced by efferocytosis to ameliorate cardiac injury and resolve inflammation",
+          "authors": "Glinton et al.",
+          "journal": "The Journal of Clinical Investigation",
+          "year": 2022,
+          "summary": "Engulfing apoptotic cells through CD36 induced VEGFC in macrophages, most strongly in efferocytic resident TIM4⁺CCR2⁻ macrophages after MI. Deleting myeloid Vegfc reduced cardiac lymphatics, increased scarring and fibrosis, and worsened function without changing initial infarct size. Gain of function improved outcomes. VEGFC also dampened inflammatory macrophage polarisation directly, so it acts on both lymphatic vessels and macrophages.",
+          "url": "https://doi.org/10.1172/JCI140685"
+        },
+        {
+          "title": "The cardiac lymphatic system stimulates resolution of inflammation following myocardial infarction",
+          "authors": "Vieira et al.",
+          "journal": "The Journal of Clinical Investigation",
+          "year": 2018,
+          "summary": "After MI, the epicardium and macrophages began producing VEGF-C, and lymphatic vessels expanded under the epicardium. Boosting lymphatics with a VEGFR3-selective VEGF-C cleared leukocytes, including macrophages, from the heart to the draining lymph nodes. Lyve1-knockout mice had normal lymphangiogenesis but kept more immune cells in the heart and developed more collagen and worse function. Lymphatic clearance of immune cells via LYVE-1 therefore helps inflammation resolve and limits fibrosis.",
+          "url": "https://doi.org/10.1172/JCI97192"
+        },
+        {
+          "title": "Human heart-macrophage assembloids mimic immune-cardiac interactions and enable arrhythmia disease modeling",
+          "authors": "O’Hern et al.",
+          "journal": "Cell Stem Cell",
+          "year": 2025,
+          "summary": "The authors built human heart organoids containing matching resident-like macrophages, which integrated stably at near-physiological numbers. The macrophages coupled to cardiomyocytes through CX43, cleared dying cells via MERTK and secreted SPP1, including in vesicles. Compared with macrophage-free organoids, contraction was stronger and collagen expression higher. Chronic inflammatory exposure caused NLRP3-dependent arrhythmias in atrial cardiomyocytes, which the NLRP3 inhibitor MCC950 reduced.",
+          "url": "https://doi.org/10.1016/j.stem.2025.09.011"
+        },
+        {
+          "title": "Activated cardiac fibroblasts control contraction of human fibrotic cardiac microtissues by a β-adrenoreceptor-dependent mechanism",
+          "authors": "Błyszczuk et al.",
+          "journal": "Cells",
+          "year": 2020,
+          "summary": "Microtissues made of human iPSC-derived cardiomyocytes and cardiac fibroblasts (4:1) contracted compactly and in sync, with fibroblasts as the only collagen source. TGF-β1 induced fibrosis, raised beating rate, lowered contraction amplitude and reduced troponin T and connexin 43. Fibroblasts activated before assembly reproduced these effects without any TGF-β1 present, so activated fibroblasts, not the cytokine itself, drive the change. The faster beating depended on β-adrenoceptors, as nadolol prevented it.",
+          "url": "https://doi.org/10.3390/cells9051270"
+        },
+        {
+          "title": "Human cardiac fibrosis-on-a-chip model recapitulates disease hallmarks and can serve as a platform for drug testing",
+          "authors": "Mastikhina et al.",
+          "journal": "Biomaterials",
+          "year": 2020,
+          "summary": "This engineered human cardiomyocyte–fibroblast tissue was driven to fibrosis with TGF-β1. It developed about tenfold more fibrillar collagen, greater stiffness and passive tension, weaker contraction and higher BNP. MicroRNA content changed both inside the tissue and in secreted vesicles. Pirfenidone lowered stiffness, BNP and several fibrosis genes but did not restore contractile force, showing both the chip’s use and its limits for testing anti-fibrotic drugs.",
+          "url": "https://doi.org/10.1016/j.biomaterials.2019.119741"
+        }
+      ],
+      'endothelial-cells': [
+        {
+          "title": "Lactate promotes endothelial-to-mesenchymal transition via Snail1 lactylation after myocardial infarction",
+          "authors": "Fan et al.",
+          "journal": "Science Advances",
+          "year": 2023,
+          "summary": "This study investigated how lactate affects endothelial cells after myocardial infarction. Lactate increased Snail1 lactylation and promoted mesenchymal and TGF-β-related signaling, while Snail1 knockdown reduced these responses. The findings connect altered metabolism with endothelial phenotypic changes, although marker co-expression alone does not demonstrate permanent conversion into scar fibroblasts.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36735787/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Single cell sequencing reveals endothelial plasticity with transient mesenchymal activation after myocardial infarction",
+          "authors": "Tombor et al.",
+          "journal": "Nature Communications",
+          "year": 2021,
+          "summary": "This mouse study followed endothelial responses over time after myocardial infarction. Endothelial cells temporarily acquired mesenchymal and altered metabolic gene-expression programs before returning toward their baseline state. Lineage tracing supported transient endothelial activation without substantial permanent conversion into fibroblasts.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33514719/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Immunoregulatory Endothelial Cells Interact With T Cells After Myocardial Infarction",
+          "authors": "Tombor et al.",
+          "journal": "Circulation Research",
+          "year": 2025,
+          "summary": "This study identified a transient endothelial population with immune-related features early after myocardial infarction. These cells expressed antigen-presentation and inflammatory programs and promoted T-cell activation through paracrine signaling. Reducing endothelial IFN-γ receptor signaling improved recovery in mouse experiments, identifying endothelial regulation of adaptive immunity as a potential contributor to post-infarction injury.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12398352/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Suppression of PFKFB3-driven glycolysis restrains endothelial-to-mesenchymal transition and fibrotic response",
+          "authors": "Zeng et al.",
+          "journal": "Signal Transduction and Targeted Therapy",
+          "year": 2022,
+          "summary": "This study examined how endothelial glucose metabolism influences mesenchymal activation. Increased PFKFB3-driven glycolysis supported TGF-β-induced endothelial changes, while metabolic or PFKFB3 inhibition reduced these responses. Endothelial PFKFB3 manipulation also affected fibrosis and cardiac function in mouse models, supporting a functional link between endothelial metabolism and remodeling.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36045132/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Cardiomyocytes stimulate angiogenesis after ischemic injury in a ZEB2-dependent manner",
+          "authors": "Gladka et al.",
+          "journal": "Nature Communications",
+          "year": 2021,
+          "summary": "This study investigated how injured cardiomyocytes stimulate neighboring endothelial cells. Cardiomyocyte ZEB2 increased secretion of thymosin β4 and prothymosin α, promoting endothelial migration, proliferation and sprouting. Cardiomyocyte-specific ZEB2 manipulation also influenced vascular growth and recovery after ischemic injury in mice.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33398012/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Age-Dependent RGS5 Loss in Pericytes Induces Cardiac Dysfunction and Fibrosis",
+          "authors": "Tamiato et al.",
+          "journal": "Circulation Research",
+          "year": 2024,
+          "summary": "This study examined age-associated changes in pericytes, which support cardiac microvessels. Pericyte-specific Rgs5 deletion altered pericyte structure and promoted fibrosis and cardiac dysfunction through signals including TGF-β2. These effects occurred without increased microvascular permeability in the tested model, showing that pericyte dysfunction can harm the heart without necessarily causing vascular leakage.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38563133/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Single-nucleus RNA sequencing in ischemic cardiomyopathy reveals common transcriptional profile underlying end-stage heart failure",
+          "authors": "Simonson et al.",
+          "journal": "Cell Reports",
+          "year": 2023,
+          "summary": "This human study identified changes in endothelial populations and gene expression in ischemic cardiomyopathy. Lymphatic and angiogenesis-associated endothelial states were altered, and computational analysis predicted increased endothelial laminin signaling toward other cardiac cells. These findings suggest changes in vascular–matrix communication, although the predicted interactions were not established as causal mechanisms.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2211124723000979?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Spatial multi-omic map of human myocardial infarction",
+          "authors": "Kuppe et al.",
+          "journal": "Nature",
+          "year": 2022,
+          "summary": "This study mapped endothelial populations and their tissue environments in human hearts after myocardial infarction. Different vascular subtypes occupied distinct regions, with capillary-associated populations and surrounding niches showing injury-related changes. The findings connect local endothelial states with hypoxia, inflammation and remodeling, while changes in sampled cell proportions do not directly measure absolute vessel density.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35948637/?dopt=Abstract&utm_source=chatgpt.com"
+        },
+        {
+          "title": "Resolving the intertwining of inflammation and fibrosis in human heart failure at single-cell level",
+          "authors": "Rao et al.",
+          "journal": "Basic Research in Cardiology",
+          "year": 2021,
+          "summary": "This human study identified activated endothelial populations in severely affected myocardial regions. These cells expressed inflammatory adhesion and chemokine-related genes, including DARC/ACKR1, SELE and VCAM1. Predicted interactions with inflammatory myeloid populations suggest a role in local immune recruitment, but the communication analysis does not independently prove causality.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34601654/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Seamless Genetic Recording of Transiently Activated Mesenchymal Gene Expression in Endothelial Cells During Cardiac Fibrosis",
+          "authors": "Zhang et al.",
+          "journal": "Circulation",
+          "year": 2021,
+          "summary": "This study used genetic recording to test whether endothelial cells become myofibroblasts during adult cardiac injury. Endothelial cells retained their identity and did not contribute to myofibroblasts or transiently activate the tested α-SMA and Zeb1 markers. The findings support resident fibroblasts as the major source of activated scar-forming cells in these models.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34797683/?utm_source=chatgpt.com",
+          "sources": [
+            {
+              "label": "research.cuhk.edu.hk",
+              "url": "https://research.cuhk.edu.hk/en/publications/seamless-genetic-recording-of-transiently-activated-mesenchymal-g-2/?utm_source=chatgpt.com"
+            }
+          ]
+        },
+        {
+          "title": "Mapping the cardiac vascular niche in heart failure",
+          "authors": "Peisker et al.",
+          "journal": "Nature Communications",
+          "year": 2022,
+          "summary": "This study mapped vascular and surrounding stromal populations during pressure-overload remodeling in mice. Endothelial cells initially showed proliferative and angiogenic responses, which were not sustained during later remodeling. Genetic tracing maintained distinct endothelial and stromal lineage boundaries, helping separate changes in cellular state from conversion between cell types.",
+          "url": "https://www.nature.com/articles/s41467-022-30682-0?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Spatiotemporal signaling underlies progressive vascular rarefaction in myocardial infarction",
+          "authors": "Tung et al.",
+          "journal": "Nature Communications",
+          "year": 2023,
+          "summary": "This study investigated why microvascular loss persists after myocardial infarction. Injured regions showed deteriorating vascular support and different signaling environments from remote myocardium. The findings link progressive vessel loss with mural-cell dysfunction and regional inflammatory and angiogenic conditions during scar remodeling.",
+          "url": "https://www.nature.com/articles/s41467-023-44227-6?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Partial Mural Cell Ablation Disrupts Coronary Vasculature Integrity and Induces Systolic Dysfunction",
+          "authors": "Cornuault et al.",
+          "journal": "Journal of the American Heart Association",
+          "year": 2023,
+          "summary": "This study partially depleted cardiac pericytes in adult mice to examine their contribution to vascular integrity. Depletion disrupted endothelial junctions, increased vascular leakage and inflammatory activation, and impaired cardiac function. Capillary density remained unchanged, demonstrating that vessel integrity and function can deteriorate without a reduction in vessel number.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37345826/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Cardiac pericyte reprogramming by MEK inhibition promotes arteriologenesis and angiogenesis of the ischemic heart",
+          "authors": "Avolio et al.",
+          "journal": "Journal of Clinical Investigation",
+          "year": 2022,
+          "summary": "This study tested whether altering pericyte signaling could improve vascular repair. MEK inhibition changed pericyte properties and enhanced their support of endothelial network formation in culture. Treatment after myocardial infarction increased vascular growth and improved cardiac outcomes in mice, supporting pericyte modulation as an experimental route to vascular repair.",
+          "url": "https://jci.org/articles/view/152308?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Dynamic Interstitial Cell Response during Myocardial Infarction Predicts Resilience to Rupture in Genetically Diverse Mice",
+          "authors": "Forte et al.",
+          "journal": "Cell Reports",
+          "year": 2020,
+          "summary": "This study mapped non-cardiomyocyte populations during infarct healing in genetically different mouse strains. Endothelial and lymphatic populations changed alongside fibroblast and immune responses across the repair period. It provides a broader framework for interpreting endothelial changes within the coordinated tissue response, while relative cell abundance does not directly establish vascular loss or regrowth."
+        },
+        {
+          "title": "Single-cell transcriptomics reveals cell-type-specific diversification in human heart failure",
+          "authors": "Koenig et al.",
+          "journal": "Nature Cardiovascular Research",
+          "year": 2022,
+          "summary": "This study compared cardiac cell populations from healthy donors and patients with dilated cardiomyopathy. It resolved arterial, venous, capillary, lymphatic and endocardial endothelial populations and identified disease-associated changes in their representation and transcription. The atlas provides a human reference for distinguishing endothelial identity from changes caused by heart failure.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35959412/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Pathogenic variants damage cell composition and single cell transcription in cardiomyopathies",
+          "authors": "Reichart et al.",
+          "journal": "Science",
+          "year": 2022,
+          "summary": "This human study examined how different cardiomyopathy-associated genetic variants affect cardiac cells. Endothelial populations showed genotype- and region-associated changes in gene expression and cellular composition. The findings demonstrate that vascular responses in heart failure can differ according to the underlying genetic disease, without implying a universal endothelial transition program.",
+          "url": "https://ccsp.hms.harvard.edu/wp-content/uploads/2022/11/Pathogenic-variants-damage-cell-composition-and-single-cell-transcription-in-cardiomyopathies-2022-Reichart-Seidman.pdf?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Location and aetiology are determinants of fibroblast activation and heterogeneity in the failing human heart",
+          "authors": "Youness et al.",
+          "journal": "Genome Medicine",
+          "year": 2025,
+          "summary": "This study investigated how disease cause and tissue location influence fibroblast states in human hearts. Spatial modeling identified relationships between particular fibroblast populations, arterial endothelial cells and smooth muscle cells, with altered organization in scar tissue. Its endothelial relevance lies in the changing perivascular neighborhood, rather than a directly tested endothelial signaling mechanism.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41310709/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Integration mapping of cardiac fibroblast single-cell transcriptomes elucidates cellular principles of fibrosis in diverse pathologies",
+          "authors": "Patrick et al.",
+          "journal": "Science Advances",
+          "year": 2024,
+          "summary": "This study integrated fibroblast datasets across different cardiac injuries into a common reference map. It identified fibroblast populations associated with particular anatomical environments, including the adventitia surrounding coronary vessels. For endothelial biology, it provides context for the stromal populations positioned to influence vascular maintenance and remodeling.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38905342/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "High-Resolution Transcriptomic Profiling of the Heart During Chronic Stress Reveals Cellular Drivers of Cardiac Fibrosis and Hypertrophy",
+          "authors": "McLellan et al.",
+          "journal": "Circulation",
+          "year": 2020,
+          "summary": "This mouse study characterized the cardiac cellular response to chronic angiotensin II stimulation. Endothelial populations changed alongside expanding activated fibroblast states, and computational analyses identified potential growth-factor communication between cell types. The findings place endothelial cells within a broader remodeling network, while predicted ligand–receptor relationships require functional validation.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32795101/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Single-cell expression profiling reveals dynamic flux of cardiac stromal, vascular and immune cells in health and injury",
+          "authors": "Farbehi et al.",
+          "journal": "eLife",
+          "year": 2019,
+          "summary": "This study mapped non-cardiomyocyte populations during early infarct healing in mice. It captured endothelial populations alongside changing fibroblast and immune compartments during inflammatory and proliferative phases. The atlas provides a reference for studying endothelial behavior within the wider repair response.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30912746/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Cells of the adult human heart",
+          "authors": "Litviňuková et al.",
+          "journal": "Nature",
+          "year": 2020,
+          "summary": "This study created a cellular atlas of healthy adult human hearts across six anatomical regions. It resolved diverse endothelial populations along the arterial–capillary–venous axis, together with lymphatic and specialized endothelial states. The atlas provides a baseline for identifying vascular cell types and interpreting disease-associated changes.",
+          "url": "https://www.nature.com/articles/s41586-020-2797-4?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Platelet-derived growth factor-AB improves scar mechanics and vascularity after myocardial infarction",
+          "authors": "Thavapalachandran et al.",
+          "journal": "Science Translational Medicine",
+          "year": 2020,
+          "summary": "This preclinical study tested PDGF-AB treatment after myocardial infarction. Treatment increased peri-infarct vascularity and improved scar organization alongside cardiac function. The findings support coordinated vascular and matrix remodeling as an experimental approach to improving recovery.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31894101/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Cardiac Pericytes Acquire a Fibrogenic Phenotype and Contribute to Vascular Maturation After Myocardial Infarction",
+          "authors": "Alex et al.",
+          "journal": "Circulation",
+          "year": 2023,
+          "summary": "This study followed cardiac pericytes during infarct healing in mice. Pericytes changed their relationship with microvessels, acquired fibrosis-associated features and contributed to vascular maturation. Manipulating pericyte TGF-β receptor signaling altered these responses, linking mural-cell behavior with stabilization of the recovering vasculature.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37350296/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Repair of the Infarcted Heart: Cellular Effectors, Molecular Mechanisms and Therapeutic Opportunities",
+          "authors": "Hilgendorf, Frantz and Frangogiannis",
+          "journal": "Circulation Research",
+          "year": 2024,
+          "summary": "This review integrates vascular repair with inflammation resolution and scar formation after myocardial infarction. It describes how endothelial growth, macrophage-derived signals and mural-cell recruitment contribute to formation and stabilization of new vessels. The review emphasizes that successful healing requires coordination between blood-vessel growth, vascular maturation and matrix remodeling.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38843294/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Primitive macrophages enable long-term vascularization of human heart-on-a-chip platforms",
+          "authors": "Landau et al.",
+          "journal": "Cell Stem Cell",
+          "year": 2024,
+          "summary": "This study incorporated primitive macrophages into engineered human cardiac tissues containing vascular cells. Macrophages improved vessel stability, patency and perfusability while supporting tissue viability and function. The findings demonstrate that immune-cell support can help maintain functional endothelial networks in human heart-on-a-chip models.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S193459092400208X?utm_source=chatgpt.com"
+        }
+      ],
+      'fibroblasts': [
+        {
+          "title": "Location and aetiology are determinants of fibroblast activation and heterogeneity in the failing human heart",
+          "authors": "Youness et al.",
+          "journal": "Genome Medicine",
+          "year": 2025,
+          "summary": "This human study examined fibroblast differences across ischemic and dilated cardiomyopathy. Fibroblast activation also varied between scar and remote myocardium. The findings show that disease cause and local tissue environment influence fibroblast behavior.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41310709/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Integration mapping of cardiac fibroblast single-cell transcriptomes elucidates cellular principles of fibrosis in diverse pathologies",
+          "authors": "Patrick et al.",
+          "journal": "Science Advances",
+          "year": 2024,
+          "summary": "This study integrated fibroblast single-cell datasets into a shared reference map. It identified related activated, cycling, myofibroblast and scar-associated states across different injuries. The resource helps compare fibroblast responses across studies without assuming that every cell follows one universal trajectory.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38905342/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Single-nucleus RNA sequencing in ischemic cardiomyopathy reveals common transcriptional profile underlying end-stage heart failure",
+          "authors": "Simonson et al.",
+          "journal": "Cell Reports",
+          "year": 2023,
+          "summary": "This study profiled human ischemic cardiomyopathy and compared it with other cardiomyopathies. Fibroblasts showed disease-associated gene-expression changes alongside other cardiac populations. The findings identify shared remodeling programs and predicted changes in cellular communication during advanced heart failure.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36790929/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Conserved Transcriptional Circuits Regulate Cardiac Fibroblast-Mediated Fibrosis",
+          "authors": "Krstevski et al.",
+          "journal": "Circulation Research",
+          "year": 2026,
+          "summary": "This study investigated regulators of fibroblast activation and reverse remodeling. Silencing transcription factors including CREB3L2, BNC2 and NFAT5 changed matrix-related gene expression in human fibroblasts. CREB3L2 influenced remodeling through both intracellular transcriptional regulation and extracellular signaling."
+        },
+        {
+          "title": "Leptin Receptor Fibroblasts Are Preferential Contributors to Cardiac Fibrosis",
+          "authors": "Larcher et al.",
+          "journal": "Circulation Research",
+          "year": 2026,
+          "summary": "This study identified a leptin-receptor-expressing cardiac fibroblast subset. These cells preferentially contributed to activated fibroblasts after myocardial infarction in mice. The findings demonstrate that resident fibroblast populations differ in their responsiveness to injury.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41988726/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Platelet derived growth factor-AB modulates post-infarct myocardium leading to extended improvement in cardiac function",
+          "authors": "Deshmukh et al.",
+          "journal": "npj Regenerative Medicine",
+          "year": 2025,
+          "summary": "This study tested PDGF-AB after myocardial infarction in pigs. Treatment improved cardiac function and modified myocardial and vascular properties over approximately two months. Benefits occurred despite comparable overall scar size, emphasizing the importance of tissue quality and organization."
+        },
+        {
+          "title": "Cardiac fibroblast BAG3 regulates TGFBR2 signaling and fibrosis in dilated cardiomyopathy",
+          "authors": "Wang et al.",
+          "journal": "Journal of Clinical Investigation",
+          "year": 2025,
+          "summary": "This study examined how BAG3 controls fibroblast responses to TGF-β. BAG3 regulated TGFBR2 degradation, and its loss enhanced receptor signaling and matrix-related responses. The findings link impaired protein handling in fibroblasts with fibrosis in dilated cardiomyopathy.",
+          "url": "https://www.jci.org/articles/view/181630?utm_source=chatgpt.com"
+        },
+        {
+          "title": "PDGF-AB Reduces Myofibroblast Differentiation Without Increasing Proliferation After Myocardial Infarction",
+          "authors": "Hume et al.",
+          "journal": "JACC: Basic to Translational Science",
+          "year": 2023,
+          "summary": "This study investigated PDGF-AB effects on fibroblast behavior after infarction. PDGF-AB reduced myofibroblast differentiation without increasing proliferation in the tested settings. It also modified matrix-related programs, demonstrating that these different aspects of fibroblast activation can be regulated separately.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37426530/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Smad7 effects on TGF-β and ErbB2 restrain myofibroblast activation and protect from postinfarction heart failure",
+          "authors": "Humeres et al.",
+          "journal": "Journal of Clinical Investigation",
+          "year": 2022,
+          "summary": "This study identified Smad7 as a protective regulator of activated fibroblasts. Fibroblast Smad7 deletion enhanced TGF-β and ErbB2 signaling and worsened post-infarction outcomes in mice. The findings demonstrate the importance of endogenous brakes on excessive myofibroblast activity.",
+          "url": "https://jci.org/articles/view/146926?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Cardiac fibroblasts regulate the development of heart failure via Htra3-TGF-β-IGFBP7 axis",
+          "authors": "Ko et al.",
+          "journal": "Nature Communications",
+          "year": 2022,
+          "summary": "Fibroblast-derived HTRA3 restrained extracellular TGF-β signaling in this study. Pressure overload reduced this protection, promoting fibrosis and cardiomyocyte damage. Restoring HTRA3 improved cardiac function and reduced fibrosis in mice.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35672400/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "A positive mechanobiological feedback loop controls bistable switching of cardiac fibroblast phenotype",
+          "authors": "Niu et al.",
+          "journal": "Cell Discovery",
+          "year": 2022,
+          "summary": "This study investigated how mechanical stiffness maintains fibroblast activation. Integrin β1 and Piezo1 formed a mutually reinforcing signaling loop. This feedback helps explain how a stiff environment can sustain an activated fibroblast state.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36068215/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "High-Resolution Transcriptomic Profiling of the Heart During Chronic Stress Reveals Cellular Drivers of Cardiac Fibrosis and Hypertrophy",
+          "authors": "McLellan et al.",
+          "journal": "Circulation",
+          "year": 2020,
+          "summary": "This mouse study mapped cardiac cell responses to chronic angiotensin II stimulation. CILP- and THBS4-associated fibroblast populations expanded during fibrosis without prominent conventional α-SMA-positive myofibroblasts. The findings show that α-SMA alone does not capture every fibrotic fibroblast response.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32795101/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Single-cell expression profiling reveals dynamic flux of cardiac stromal, vascular and immune cells in health and injury",
+          "authors": "Farbehi et al.",
+          "journal": "eLife",
+          "year": 2019,
+          "summary": "This study mapped cardiac non-muscle cells during early infarct healing in mice. Fibroblasts occupied distinct activated, cycling and matrix-producing states that changed over time. The findings established fibroblast heterogeneity within the wider vascular and immune repair response.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30912746/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Specialized fibroblast differentiated states underlie scar formation in the infarcted mouse heart",
+          "authors": "Fu et al.",
+          "journal": "Journal of Clinical Investigation",
+          "year": 2018,
+          "summary": "This study followed fibroblasts through infarct healing in mice. Early proliferating myofibroblasts later lost α-SMA expression while persisting as specialized matrifibrocytes. These cells expressed scar-associated matrix genes, showing that mature scars retain a distinct fibroblast population.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29664017/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Genetic lineage tracing defines myofibroblast origin and function in the injured heart",
+          "authors": "Kanisicak et al.",
+          "journal": "Nature Communications",
+          "year": 2016,
+          "summary": "Genetic tracing identified resident fibroblasts as the predominant source of injury-activated myofibroblasts in mice. Periostin-expressing myofibroblasts were necessary for scar formation. Removing them impaired healing and increased ventricular rupture, demonstrating their essential early reparative role.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27447449/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Cold and hot fibrosis define clinically distinct cardiac pathologies",
+          "authors": "Miyara et al.",
+          "journal": "Cell Systems",
+          "year": 2025,
+          "summary": "This study examined fibrosis maintained by interactions between macrophages and myofibroblasts. Acute infarction produced persistent myofibroblasts after macrophages declined, whereas chronic injury maintained both populations. These “cold” and “hot” patterns suggest different cellular mechanisms sustaining fibrosis.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11922821/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Macrophage-Derived CCL24 Promotes Cardiac Fibrosis Via Fibroblast CCR3",
+          "authors": "Parthiban et al.",
+          "journal": "Circulation Research",
+          "year": 2025,
+          "summary": "Macrophage-derived CCL24 activated fibroblasts through CCR3 in this study. The response involved PI3K–AKT signaling, proliferation and TGF-β release. Disrupting this pathway reduced pressure-overload fibrosis in mice.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40955564/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "DNMT3A clonal hematopoiesis-driver mutations induce cardiac fibrosis by paracrine activation of fibroblasts",
+          "authors": "Shumliakivska et al.",
+          "journal": "Nature Communications",
+          "year": 2024,
+          "summary": "This study connected DNMT3A-associated blood-cell mutations with cardiac fibrosis. Altered monocyte/macrophage signaling increased HB-EGF, which stimulated fibroblast activation and collagen production. It demonstrates how changes outside the fibroblast compartment can create a profibrotic environment.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38242884/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Human pericardial macrophages suppress cardiac fibrosis through cystatin C signaling after myocardial infarction",
+          "authors": "Fatehi Hassanabad et al.",
+          "journal": "JCI Insight",
+          "year": 2026,
+          "summary": "Human FN1-positive pericardial macrophages inhibited cardiac fibroblast activity in this study. Their secreted cystatin C reduced TGF-β-induced collagen-gel contraction. Blocking cystatin C removed the inhibitory effect, supporting a protective soluble signaling mechanism.",
+          "url": "https://doi.org/10.1172/jci.insight.202383?utm_source=chatgpt.com"
+        },
+        {
+          "title": "TREM2 macrophage promotes cardiac repair in myocardial infarction by reprogramming metabolism via SLC25A53",
+          "authors": "Gong et al.",
+          "journal": "Cell Death & Differentiation",
+          "year": 2024,
+          "summary": "This study linked macrophage debris clearance with metabolic changes that increased itaconate production. Itaconate supported reparative fibroblast proliferation and reduced cardiomyocyte apoptosis. The findings illustrate that fibroblast proliferation can contribute to successful healing.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38182899/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "The protective role of GATA6+ pericardial macrophages in pericardial inflammation",
+          "authors": "Hughes et al.",
+          "journal": "iScience",
+          "year": 2024,
+          "summary": "This study examined macrophage protection within the pericardial compartment. GATA6-positive cells limited inflammation and inflammatory responses in cocultured fibroblasts. Their absence did not significantly change myocardial scar formation or function after infarction in the tested setting.",
+          "url": "https://www.sciencedirect.com/science/article/pii/S258900422401469X?utm_source=chatgpt.com"
+        },
+        {
+          "title": "MicroRNA-21–Dependent Macrophage-to-Fibroblast Signaling Determines the Cardiac Response to Pressure Overload",
+          "authors": "Ramanujam et al.",
+          "journal": "Circulation",
+          "year": 2021,
+          "summary": "Macrophage miR-21 regulated inflammatory activation and profibrotic signaling to fibroblasts in this study. Its deletion reduced fibroblast activation, fibrosis and cardiac dysfunction during pressure overload. Direct vesicle-mediated transfer of miR-21 into fibroblasts was not established.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8032214/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Cardiac Resident Macrophages Prevent Fibrosis and Stimulate Angiogenesis",
+          "authors": "Revelo et al.",
+          "journal": "Circulation Research",
+          "year": 2021,
+          "summary": "This mouse study examined resident macrophages during pressure overload. Their depletion increased fibrosis and dysfunction while reducing microvascular density. The findings show that protective immune and vascular support influence fibroblast-mediated remodeling.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34645281/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Lactate promotes endothelial-to-mesenchymal transition via Snail1 lactylation after myocardial infarction",
+          "authors": "Fan et al.",
+          "journal": "Science Advances",
+          "year": 2023,
+          "summary": "This study investigated how lactate alters endothelial behavior after infarction. Lactate promoted Snail1 lactylation and mesenchymal signaling. These changes support endothelial plasticity but do not independently establish permanent conversion into substantial numbers of scar fibroblasts.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36735787/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Spatiotemporal signaling underlies progressive vascular rarefaction in myocardial infarction",
+          "authors": "Tung et al.",
+          "journal": "Nature Communications",
+          "year": 2023,
+          "summary": "This study investigated progressive vascular deterioration after infarction. It linked vascular loss with altered mural-cell function and changes in the surrounding tissue environment. The findings contextualize interactions between vascular support and scar remodeling without proving every predicted fibroblast-derived signaling pathway.",
+          "url": "https://www.nature.com/articles/s41467-023-44227-6?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Mapping the cardiac vascular niche in heart failure",
+          "authors": "Peisker et al.",
+          "journal": "Nature Communications",
+          "year": 2022,
+          "summary": "This study mapped vascular and perivascular populations during cardiac remodeling. A fibroblast subset acquired THBS4 expression and expanded after injury. TEAD1 was identified as a regulator of fibroblast activation, linking the vascular niche with fibrotic remodeling.",
+          "url": "https://www.nature.com/articles/s41467-022-30682-0?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Suppression of PFKFB3-driven glycolysis restrains endothelial-to-mesenchymal transition and fibrotic response",
+          "authors": "Zeng et al.",
+          "journal": "Signal Transduction and Targeted Therapy",
+          "year": 2022,
+          "summary": "This study investigated endothelial glycolysis as a regulator of fibrosis-associated behavior. Suppressing PFKFB3 reduced endothelial mesenchymal responses and experimental fibrosis. The findings support a metabolic contribution to the fibrotic environment without establishing endothelial cells as a major permanent fibroblast source.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36045132/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Myofibroblast-Derived Exosome Induce Cardiac Endothelial Cell Dysfunction",
+          "authors": "Ranjan et al.",
+          "journal": "Frontiers in Cardiovascular Medicine",
+          "year": 2021,
+          "summary": "Activated fibroblast exosomes impaired endothelial migration, tube formation and survival in this study. Their cargo included increased miR-200a-3p. Inhibiting this microRNA in fibroblasts alleviated the endothelial dysfunction, demonstrating harmful fibroblast-to-vascular communication."
+        },
+        {
+          "title": "Single cell sequencing reveals endothelial plasticity with transient mesenchymal activation after myocardial infarction",
+          "authors": "Tombor et al.",
+          "journal": "Nature Communications",
+          "year": 2021,
+          "summary": "This study followed endothelial responses after infarction in mice. Endothelial cells temporarily expressed mesenchymal programs before returning toward baseline. The findings distinguish transient endothelial activation from permanent conversion into scar-forming fibroblasts.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33514719/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "miR-24-3p secreted as extracellular vesicle cargo by cardiomyocytes inhibits fibrosis in human cardiac microtissues",
+          "authors": "Senesi et al.",
+          "journal": "Cardiovascular Research",
+          "year": 2025,
+          "summary": "Cardiomyocyte vesicle miR-24-3p inhibited human fibroblast activation in this study. Ischemia-like conditions reduced this protective cargo. Berberine restored miR-24-3p and reduced fibrosis-related responses in tissue models, with microRNA blockade preventing the benefit.",
+          "url": "https://academic.oup.com/cardiovascres/article/121/1/143/7890765?login=false&utm_source=chatgpt.com"
+        },
+        {
+          "title": "Senescent cardiomyocytes contribute to cardiac dysfunction following myocardial infarction",
+          "authors": "Redgrave et al.",
+          "journal": "npj Aging",
+          "year": 2023,
+          "summary": "This study tested cardiomyocyte senescence through cardiomyocyte-specific p16 deletion in mice. Deletion reduced scar size and senescence markers and improved function. Changes in surrounding cells suggest effects on the tissue environment, although direct senescence transmission to fibroblasts was not isolated.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37316516/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Age-Dependent RGS5 Loss in Pericytes Induces Cardiac Dysfunction and Fibrosis",
+          "authors": "Tamiato et al.",
+          "journal": "Circulation Research",
+          "year": 2024,
+          "summary": "This study examined how RGS5 loss changes pericyte signaling during aging. RGS5-deficient pericytes activated resident fibroblasts through a program involving Gαq and TGF-β2. The mechanism supports harmful pericyte-to-fibroblast communication without requiring pericyte conversion into myofibroblasts.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38563133/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Tregs delivered post-myocardial infarction adopt an injury-specific phenotype promoting cardiac repair via macrophages in mice",
+          "authors": "Alshoubaki et al.",
+          "journal": "Nature Communications",
+          "year": 2024,
+          "summary": "This study tested regulatory T-cell delivery after infarction in mice. Treatment shifted macrophage responses toward repair-associated programs and improved healing. It demonstrates how immune-cell interactions can indirectly influence fibroblast activity and scar remodeling.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39090108/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Eosinophil Deficiency Promotes Aberrant Repair and Adverse Remodeling Following Acute Myocardial Infarction",
+          "authors": "Toor et al.",
+          "journal": "JACC: Basic to Translational Science",
+          "year": 2020,
+          "summary": "This study investigated eosinophil contributions to infarct healing in mice. Eosinophil deficiency disrupted repair-associated immune responses and collagen organization and worsened remodeling. The findings show that effective fibroblast-mediated repair depends on coordinated immune signals.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32760855/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Modeling cardiac fibroblast heterogeneity from human pluripotent stem cell-derived epicardial cells",
+          "authors": "Fernandes et al.",
+          "journal": "Nature Communications",
+          "year": 2023,
+          "summary": "This study generated distinct cardiac fibroblast populations from human pluripotent stem cell-derived epicardial cells. The cells enabled investigation of fibroblast heterogeneity and responses to activating signals. The platform supports experiments on how developmental identity influences fibroblast behavior.",
+          "url": "https://www.nature.com/articles/s41467-023-43312-0?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Pirfenidone Has Anti-fibrotic Effects in a Tissue-Engineered Model of Human Cardiac Fibrosis",
+          "authors": "Bracco Gartner et al.",
+          "journal": "Frontiers in Cardiovascular Medicine",
+          "year": 2022,
+          "summary": "This study developed a human cardiac fibrosis model containing cardiomyocytes and fibroblasts in a hydrogel. Pirfenidone reduced selected matrix-related readouts, including collagen protein. It did not reverse every TGF-β-induced response, emphasizing the importance of measuring several aspects of fibrosis."
+        },
+        {
+          "title": "Activated Cardiac Fibroblasts Control Contraction of Human Fibrotic Cardiac Microtissues by a β-Adrenoreceptor-Dependent Mechanism",
+          "authors": "Błyszczuk et al.",
+          "journal": "Cells",
+          "year": 2020,
+          "summary": "This study examined fibroblast effects on human cardiac microtissue function. Activated fibroblasts altered beating and contraction through mechanisms involving β-adrenoreceptors. The findings demonstrate functional effects of fibroblasts extending beyond extracellular matrix accumulation.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32443848/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Cardiac fibrosis: Cell biological mechanisms, molecular pathways and therapeutic opportunities",
+          "authors": "Frangogiannis",
+          "journal": "Molecular Aspects of Medicine",
+          "year": 2019,
+          "summary": "This review summarizes fibroblast origins and mechanisms controlling cardiac fibrosis. It describes responses to inflammatory mediators, growth factors and mechanical signals. It also explains the distinction between necessary replacement scarring and excessive fibrosis that compromises cardiac function.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30056242/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Dynamic Interstitial Cell Response during Myocardial Infarction Predicts Resilience to Rupture in Genetically Diverse Mice",
+          "authors": "Forte et al.",
+          "journal": "Cell Reports",
+          "year": 2020,
+          "summary": "This study compared infarct responses between mouse strains with different rupture susceptibility. Single-cell profiling identified differences in fibroblast activation, collagen deposition and inflammatory timing. The findings connect the coordination of early repair responses with subsequent scar stability."
+        },
+        {
+          "title": "Spatial multi-omic map of human myocardial infarction",
+          "authors": "Kuppe et al.",
+          "journal": "Nature",
+          "year": 2022,
+          "summary": "This study mapped fibroblast states and locations in human infarcted hearts. POSTN-positive, matrix-producing fibroblasts accumulated in injured regions and were associated with phagocytic macrophage populations. These spatial relationships identify potential repair niches but do not establish causality for individual signaling interactions.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35948637/?dopt=Abstract&utm_source=chatgpt.com"
+        },
+        {
+          "title": "Cardiac fibrosis",
+          "authors": "Frangogiannis",
+          "journal": "Cardiovascular Research",
+          "year": 2021,
+          "summary": "This review integrates biochemical and mechanical regulation of cardiac fibroblasts. It discusses how matrix sensing and intracellular signaling promote activation and matrix production. These mechanisms help explain feedback through which existing fibrosis can sustain further remodeling.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=33135058&utm_source=chatgpt.com"
+        },
+        {
+          "title": "The Cellular Origin of Activated Fibroblasts in the Infarcted and Remodeling Myocardium",
+          "authors": "Alex and Frangogiannis",
+          "journal": "Circulation Research",
+          "year": 2018,
+          "summary": "This commentary evaluates evidence concerning activated fibroblast origins. It emphasizes lineage-tracing support for resident fibroblasts as major contributors to injury responses. It also explains why marker expression alone cannot demonstrate conversion from another cell lineage.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29449358/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Unresolved entry: “Fibroblast de-activation and scar maturation in the infarcted heart”",
+          "authors": "Supplied as: Frangogiannis",
+          "journal": "Journal of Molecular and Cellular Cardiology",
+          "year": 2023,
+          "summary": "The supplied entry describes myofibroblast deactivation and scar maturation. Its DOI actually identifies an unrelated PPARδ/desmin study, so a reliable paper summary cannot be attributed to this entry. The maturation concepts are supported by verified references such as papers 14 and 44.",
+          "citationStatus": "Unverified citation"
+        },
+        {
+          "title": "Repair of the Infarcted Heart: Cellular Effectors, Molecular Mechanisms and Therapeutic Opportunities",
+          "authors": "Hilgendorf, Frantz and Frangogiannis",
+          "journal": "Circulation Research",
+          "year": 2024,
+          "summary": "This review describes inflammatory, proliferative and maturation processes during infarct healing. Fibroblast expansion and matrix production stabilize injured myocardium before the scar matures. It explains how poorly coordinated or persistent activation can contribute to adverse remodeling.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38843294/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Primitive macrophages induce sarcomeric maturation and functional enhancement of developing human cardiac microtissues via efferocytic pathways",
+          "authors": "Hamidzada et al.",
+          "journal": "Nature Cardiovascular Research",
+          "year": 2024,
+          "summary": "This study added primitive macrophages to developing human cardiac microtissues containing cardiomyocytes and fibroblasts. Macrophages improved maturation and function through mechanisms involving dying-cell clearance. The findings emphasize immune context in tissue models without establishing a direct fibroblast-specific antifibrotic mechanism.",
+          "url": "https://www.nature.com/articles/s44161-024-00471-7?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Single-nucleus profiling of human dilated and hypertrophic cardiomyopathy",
+          "authors": "Chaffin et al.",
+          "journal": "Nature",
+          "year": 2022,
+          "summary": "This human study identified an activated fibroblast population enriched in cardiomyopathy. Researchers tested associated genes using a CRISPR screen in primary cardiac fibroblasts. Disrupting selected genes reduced TGF-β-induced myofibroblast transition, connecting disease profiling with functional target testing."
+        },
+        {
+          "title": "Cardiac Fibrosis: The Fibroblast Awakens",
+          "authors": "Travers et al.",
+          "journal": "Circulation Research",
+          "year": 2016,
+          "summary": "This review describes fibroblast activation and its contribution to cardiac remodeling. It covers signaling controlling myofibroblast differentiation, matrix production and cellular interactions. It provides foundational context for limiting excessive fibrosis while preserving necessary repair.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26987915/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Resolving the intertwining of inflammation and fibrosis in human heart failure at single-cell level",
+          "authors": "Rao et al.",
+          "journal": "Basic Research in Cardiology",
+          "year": 2021,
+          "summary": "This study characterized fibroblasts in human myocardial regions with different damage severity. It identified activated and matrix-producing states and highlighted AEBP1 as a candidate activation-associated regulator. The findings link local inflammation with fibroblast heterogeneity, while predicted regulatory relationships require functional validation.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34601654/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Platelet-derived growth factor-AB improves scar mechanics and vascularity after myocardial infarction",
+          "authors": "Thavapalachandran et al.",
+          "journal": "Science Translational Medicine",
+          "year": 2020,
+          "summary": "This preclinical study tested PDGF-AB after myocardial infarction. Treatment improved scar collagen organization and vascularity alongside cardiac function. The findings emphasize scar architecture and vascular support as important determinants of recovery.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31894101/?utm_source=chatgpt.com"
+        },
+        {
+          "title": "Seamless Genetic Recording of Transiently Activated Mesenchymal Gene Expression in Endothelial Cells During Cardiac Fibrosis",
+          "authors": "Zhang et al.",
+          "journal": "Circulation",
+          "year": 2021,
+          "summary": "This study used genetic recording to investigate endothelial contributions to myofibroblasts. Adult injury experiments found no endothelial-derived myofibroblasts or transient activation of the tested α-SMA and Zeb1 markers. Resident fibroblasts instead activated the myofibroblast program, supporting their major contribution to fibrosis.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34797683/?utm_source=chatgpt.com"
+        }
+      ],
+      'monocytes-macrophages': [
+        {
+          "title": "Macrophages in the infarcted heart acquire a fibrogenic phenotype, expressing matricellular proteins, but do not undergo fibroblast conversion",
+          "authors": "Li et al.",
+          "journal": "Journal of Molecular and Cellular Cardiology",
+          "year": 2024,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39089570/?utm_source=chatgpt.com",
+          "summary": "This study investigated whether macrophages become fibroblasts after myocardial infarction in mice. Lineage tracing found no substantial macrophage-to-fibroblast conversion, while single-cell analysis identified macrophage expression of fibrosis-regulating factors such as TGF-β, PDGF and matricellular proteins. The findings support a role for macrophages in shaping fibroblast activity and matrix remodeling without becoming the main collagen-producing cells themselves."
+        },
+        {
+          "title": "Resident cardiac macrophages mediate adaptive myocardial remodeling",
+          "authors": "Wong et al.",
+          "journal": "Immunity",
+          "year": 2021,
+          "url": "https://www.sciencedirect.com/science/article/pii/S1074761321002892?utm_source=chatgpt.com",
+          "summary": "In a mouse model of dilated cardiomyopathy, resident CCR2-negative macrophages maintained physical contacts with cardiomyocytes. These macrophages sensed mechanical stretch through TRPV4 and activated growth-factor programs that supported cardiac adaptation and coronary vascular growth. Removing them worsened cardiac function, fibrosis and survival, demonstrating a protective role in this setting."
+        },
+        {
+          "title": "Spatial multi-omic map of human myocardial infarction",
+          "authors": "Kuppe et al.",
+          "journal": "Nature",
+          "year": 2022,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35948637/?dopt=Abstract&utm_source=chatgpt.com",
+          "summary": "This study combined single-cell and spatial profiling to map cellular changes in human hearts after myocardial infarction. It identified SPP1- and TREM2-expressing myeloid populations with phagocytic features, including CD36 expression, within injured tissue. Their location alongside remodeling cell populations identifies potential communication within the fibrotic niche, although spatial association alone does not establish a causal effect on fibroblasts."
+        },
+        {
+          "title": "Single-cell expression profiling reveals dynamic flux of cardiac stromal, vascular and immune cells in health and injury",
+          "authors": "Farbehi et al.",
+          "journal": "eLife",
+          "year": 2019,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30912746/?utm_source=chatgpt.com",
+          "summary": "This mouse study used single-cell RNA sequencing to characterize non-cardiomyocyte populations before and after myocardial infarction. It revealed substantial changes in immune, vascular and fibroblast populations, including distinct macrophage transcriptional states. The resulting atlas provides a framework for studying injury-associated cellular interactions, while macrophage origins and replacement dynamics require additional lineage-tracing evidence."
+        },
+        {
+          "title": "Cold and hot fibrosis define clinically distinct cardiac pathologies",
+          "authors": "Miyara et al.",
+          "journal": "Cell Systems",
+          "year": 2025,
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11922821/?utm_source=chatgpt.com",
+          "summary": "This study examined fibrosis as an interaction between macrophages and myofibroblasts. After acute myocardial infarction, macrophages expanded early and subsequently declined while myofibroblasts persisted, producing a “cold” fibrosis pattern. Chronic injury supported the continued presence of both populations, termed “hot” fibrosis, suggesting that persistent cellular interactions can help maintain fibrotic disease."
+        },
+        {
+          "title": "Macrophage-Derived CCL24 Promotes Cardiac Fibrosis Via Fibroblast CCR3",
+          "authors": "Parthiban et al.",
+          "journal": "Circulation Research",
+          "year": 2025,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40955564/?utm_source=chatgpt.com",
+          "summary": "In mouse pressure overload, macrophage-derived CCL24 promoted cardiac fibroblast activation. CCL24 acted through fibroblast CCR3 and PI3K–AKT signaling, increasing proliferation, α-SMA expression and TGF-β release. Ccl24 deletion reduced fibrosis, identifying a functionally tested macrophage-to-fibroblast signaling pathway."
+        },
+        {
+          "title": "DNMT3A clonal hematopoiesis-driver mutations induce cardiac fibrosis by paracrine activation of fibroblasts",
+          "authors": "Shumliakivska et al.",
+          "journal": "Nature Communications",
+          "year": 2024,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38242884/?utm_source=chatgpt.com",
+          "summary": "This study investigated how DNMT3A-associated clonal hematopoiesis can influence cardiac fibrosis through altered blood-cell signaling. DNMT3A-deficient monocytes/macrophages increased HB-EGF signaling, which stimulated fibroblast activation and collagen production in experimental systems. The findings connect a mutation originating in blood-forming cells with harmful changes in the cardiac tissue environment.",
+          "sources": [
+            {
+              "label": "nature.com",
+              "url": "https://www.nature.com/articles/s41467-023-43003-w.pdf?utm_source=chatgpt.com"
+            }
+          ]
+        },
+        {
+          "title": "Human pericardial macrophages suppress cardiac fibrosis through cystatin C signaling after myocardial infarction",
+          "authors": "Fatehi Hassanabad et al.",
+          "journal": "JCI Insight",
+          "year": 2026,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42461709/?utm_source=chatgpt.com",
+          "summary": "This study identified human FN1-positive pericardial macrophages that suppressed cardiac fibroblast activation and collagen-gel contraction. Their protective effect involved secretion of cystatin C, encoded by CST3, and blocking cystatin C removed the inhibitory effect in coculture. These macrophages and their antifibrotic activity were altered after myocardial infarction. The findings identify a protective pericardial signaling mechanism without establishing that these human cells are equivalent to the mouse GATA6-positive population.",
+          "sources": [
+            {
+              "label": "doi.org",
+              "url": "https://doi.org/10.1172/jci.insight.202383?utm_source=chatgpt.com"
+            }
+          ]
+        },
+        {
+          "title": "TREM2 macrophage promotes cardiac repair in myocardial infarction by reprogramming metabolism via SLC25A53",
+          "authors": "Gong et al.",
+          "journal": "Cell Death & Differentiation",
+          "year": 2024,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38182899/?utm_source=chatgpt.com",
+          "summary": "This mouse study linked macrophage clearance of dying cells to metabolic changes that support cardiac repair. TREM2 signaling altered mitochondrial metabolism through SLC25A53 and increased production of itaconate. Itaconate reduced cardiomyocyte apoptosis and supported reparative fibroblast proliferation, while macrophage TREM2 deficiency worsened post-infarction outcomes. Rescue experiments supported itaconate as an important mediator of this protective response."
+        },
+        {
+          "title": "The protective role of GATA6+ pericardial macrophages in pericardial inflammation",
+          "authors": "Hughes et al.",
+          "journal": "iScience",
+          "year": 2024,
+          "url": "https://www.sciencedirect.com/science/article/pii/S258900422401469X?utm_source=chatgpt.com",
+          "summary": "This study examined the inflammatory behavior of GATA6-positive macrophages in the pericardial cavity. These cells showed relatively restrained responses to inflammatory stimulation and limited inflammatory gene induction in cocultured fibroblasts. Their protective effects were most evident in the pericardial compartment, with limited effects on myocardial inflammation and post-infarction remodeling."
+        },
+        {
+          "title": "Dynamics of monocyte-derived macrophage diversity in experimental myocardial infarction",
+          "authors": "Rizzo et al.",
+          "journal": "Cardiovascular Research",
+          "year": 2023,
+          "url": "https://doi.org/10.1093/cvr/cvac113?utm_source=chatgpt.com",
+          "summary": "Using a mouse infarction time course, this study mapped how recruited monocytes develop into different macrophage states. It identified inflammatory populations alongside TREM2-high states progressing from SPP1-high intermediates toward GDF15-high differentiated macrophages. Engulfment of apoptotic cells induced features of the TREM2-high program in culture, linking local debris clearance to macrophage-state acquisition."
+        },
+        {
+          "title": "Spatiotemporal dynamics of macrophage heterogeneity and a potential function of Trem2hi macrophages in infarcted hearts",
+          "authors": "Jung et al.",
+          "journal": "Nature Communications",
+          "year": 2022,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35933399/?utm_source=chatgpt.com",
+          "summary": "This mouse study combined single-cell and spatial transcriptomics to examine macrophage changes after myocardial infarction. TREM2-high macrophages accumulated in infarct and border regions and expressed programs associated with phagocytosis and lipid metabolism. These findings associate particular macrophage states with the local repair environment, although their spatial enrichment alone does not prove that they form a protective barrier."
+        },
+        {
+          "title": "MicroRNA-21–Dependent Macrophage-to-Fibroblast Signaling Determines the Cardiac Response to Pressure Overload",
+          "authors": "Ramanujam et al.",
+          "journal": "Circulation",
+          "year": 2021,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33550817/?utm_source=chatgpt.com",
+          "summary": "This study investigated how miR-21 within cardiac macrophages controls their response to pressure overload. Macrophage-specific miR-21 deletion reduced inflammatory activation, fibroblast activation, interstitial fibrosis and cardiac dysfunction in mice. Coculture experiments showed that macrophage miR-21 was required for strong profibrotic signaling to fibroblasts. The demonstrated mechanism concerns regulation of macrophage behavior and secreted signals; vesicle-mediated transfer of miR-21 into fibroblasts was not established.",
+          "sources": [
+            {
+              "label": "pmc.ncbi.nlm.nih.gov",
+              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8032214/?utm_source=chatgpt.com"
+            }
+          ]
+        },
+        {
+          "title": "Cardiac Resident Macrophages Prevent Fibrosis and Stimulate Angiogenesis",
+          "authors": "Revelo et al.",
+          "journal": "Circulation Research",
+          "year": 2021,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34645281/?utm_source=chatgpt.com",
+          "summary": "This mouse pressure-overload study distinguished protective resident macrophage functions from those of recruited monocyte-derived populations. Depleting resident macrophages worsened fibrosis and cardiac dysfunction and reduced microvascular density. Recruited populations expressed stronger inflammatory and profibrotic programs, while CCR2 deficiency reduced their accumulation and fibrosis, showing that macrophage contributions depend on the population examined."
+        },
+        {
+          "title": "Cardiomyocyte NOX4 regulates resident macrophage-mediated inflammation and diastolic dysfunction in stress cardiomyopathy",
+          "authors": "Vendrov et al.",
+          "journal": "Redox Biology",
+          "year": 2023,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37871532/?utm_source=chatgpt.com",
+          "summary": "This study tested how oxidative stress in cardiomyocytes influences resident macrophages during adrenergic stress in mice. Cardiomyocyte NOX4 activity favored inflammatory macrophage states and was associated with interstitial fibrosis and impaired ventricular relaxation. Cardiomyocyte-specific Nox4 deletion reduced these effects, demonstrating that resident macrophage behavior can become harmful in response to signals from stressed muscle cells."
+        },
+        {
+          "title": "Macrophage-produced VEGFC is induced by efferocytosis to ameliorate cardiac injury and inflammation",
+          "authors": "Glinton et al.",
+          "journal": "Journal of Clinical Investigation",
+          "year": 2022,
+          "url": "https://www.jci.org/articles/view/140685?utm_source=chatgpt.com",
+          "summary": "This study showed that engulfment of apoptotic cells stimulates macrophage VEGFC production through a CD36-dependent mechanism. Myeloid Vegfc deletion impaired lymphatic growth, increased inflammation and worsened repair after myocardial infarction in mice. Increasing VEGFC supported recovery, while VEGFC also directly suppressed inflammatory responses in macrophages, linking debris clearance with both lymphatic repair and inflammation resolution."
+        },
+        {
+          "title": "The cardiac lymphatic system stimulates resolution of inflammation following myocardial infarction",
+          "authors": "Vieira et al.",
+          "journal": "Journal of Clinical Investigation",
+          "year": 2018,
+          "url": "https://doi.org/10.1172/jci97192?utm_source=chatgpt.com",
+          "summary": "This mouse study examined how cardiac lymphatic vessels remove immune cells after myocardial infarction. VEGF-C treatment expanded lymphatic vessels and promoted clearance of macrophages and other leukocytes toward draining mediastinal lymph nodes. Loss of LYVE1 impaired this clearance and prolonged inflammation, demonstrating that successful repair depends partly on immune-cell removal from injured tissue."
+        },
+        {
+          "title": "Tregs delivered post-myocardial infarction adopt an injury-specific phenotype promoting cardiac repair via macrophages in mice",
+          "authors": "Alshoubaki et al.",
+          "journal": "Nature Communications",
+          "year": 2024,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39090108/?utm_source=chatgpt.com",
+          "summary": "This study investigated how transferred regulatory T cells influence healing after myocardial infarction in mice. Treatment shifted monocyte/macrophage gene expression toward repair-associated programs, including increased growth and tissue-remodeling signals and reduced inflammatory genes. The resulting resident-like expression profile indicates a change in macrophage state, without demonstrating conversion into a different developmental lineage."
+        },
+        {
+          "title": "Eosinophil Deficiency Promotes Aberrant Repair and Adverse Remodeling Following Acute Myocardial Infarction",
+          "authors": "Toor et al.",
+          "journal": "JACC: Basic to Translational Science",
+          "year": 2020,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32760855/?utm_source=chatgpt.com",
+          "summary": "This mouse study showed that eosinophils help coordinate macrophage responses and scar maturation after myocardial infarction. Eosinophil deficiency reduced repair-associated macrophage markers and worsened ventricular dilation, function and collagen organization. Eosinophil replacement restored aspects of the macrophage response, while IL-4 treatment improved outcomes specifically in eosinophil-deficient animals. These findings demonstrate that macrophage-mediated repair depends on signals from other immune populations."
+        },
+        {
+          "title": "Gata6+ Pericardial Cavity Macrophages Relocate to the Injured Heart and Prevent Cardiac Fibrosis",
+          "authors": "Deniset et al.",
+          "journal": "Immunity",
+          "year": 2019,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31315031/?utm_source=chatgpt.com",
+          "summary": "This study reported that GATA6-positive pericardial cavity macrophages rapidly accumulated at injured regions of the mouse heart. Disrupting this population increased fibrosis and adverse remodeling in the tested injury models. It therefore proposed a protective role for macrophages reaching the heart from the pericardial cavity. Later studies using different tracing and depletion methods reported more restricted myocardial involvement, so this effect remains dependent on experimental context."
+        },
+        {
+          "title": "CCL17 Aggravates Myocardial Injury by Suppressing Recruitment of Regulatory T Cells",
+          "authors": "Feng et al.",
+          "journal": "Circulation",
+          "year": 2022,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35113652/?utm_source=chatgpt.com",
+          "summary": "This study identified macrophages and dendritic cells as sources of CCL17 in injured mouse hearts. CCL17 limited recruitment of protective regulatory T cells and contributed to worse myocardial injury. CCR2 inhibition reduced accumulation of CCL17-expressing myeloid cells, identifying an interaction through which myeloid populations can interfere with protective immune regulation."
+        },
+        {
+          "title": "Cardiac Resident Macrophage-Derived Legumain Improves Cardiac Repair by Promoting Clearance and Degradation of Apoptotic Cardiomyocytes After Myocardial Infarction",
+          "authors": "Jia et al.",
+          "journal": "Circulation",
+          "year": 2022,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35430895/?utm_source=chatgpt.com",
+          "summary": "This study investigated legumain, an enzyme expressed by resident cardiac macrophages, in post-infarction repair. Legumain deficiency impaired both clearance and intracellular degradation of apoptotic cardiomyocytes and worsened cardiac injury and fibrosis in mice. Increasing macrophage legumain improved repair, emphasizing that effective disposal of dying cells includes both engulfment and subsequent digestion."
+        },
+        {
+          "title": "Genetic Lineage Tracing of Pericardial Cavity Macrophages in the Injured Heart",
+          "authors": "Jin et al.",
+          "journal": "Circulation Research",
+          "year": 2022,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35440174/?utm_source=chatgpt.com",
+          "summary": "Using specific genetic tracing, this study examined whether pericardial cavity macrophages enter injured mouse myocardium. The cells accumulated mainly on the epicardial surface, with little deep myocardial invasion. Their targeted removal did not significantly change infarct scar size, collagen deposition or cardiac function in the tested settings, limiting the proposed general contribution of these cells to myocardial repair."
+        },
+        {
+          "title": "Sipa1 Drives a Maladaptive Fibroblast-Myeloid Axis After Myocardial Infarction",
+          "authors": "Ko et al.",
+          "journal": "Circulation Research",
+          "year": 2025,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40567222/?utm_source=chatgpt.com",
+          "summary": "This study identified fibroblast Sipa1 as a driver of inflammatory myeloid-cell recruitment after myocardial infarction in mice. Through RasGRP2–Ras–JNK signaling, fibroblasts increased production of CCL2, CCL7 and GM-CSF, attracting and activating monocytes/macrophages. Fibroblast-specific Sipa1 deletion reduced this inflammatory response and improved remodeling, demonstrating that fibroblasts can actively sustain harmful immune-cell activity."
+        },
+        {
+          "title": "Resolving the intertwining of inflammation and fibrosis in human heart failure at single-cell level",
+          "authors": "Rao et al.",
+          "journal": "Basic Research in Cardiology",
+          "year": 2021,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34601654/?utm_source=chatgpt.com",
+          "summary": "This human study mapped immune and non-muscle-cell populations in failing hearts with different degrees of tissue damage. CXCL8-high, HLA-DR-high myeloid populations were associated with severely affected regions, and computational analyses suggested interactions with activated endothelial cells. These findings identify potential inflammatory recruitment circuits in fibrotic tissue, while the predicted signaling relationships remain observational."
+        },
+        {
+          "title": "Targeting immune–fibroblast cell communication in heart failure",
+          "authors": "Amrute et al.",
+          "journal": "Nature",
+          "year": 2024,
+          "url": "https://www.nature.com/articles/s41586-024-08008-5?utm_source=chatgpt.com",
+          "summary": "This study combined human cardiac multiomic profiling with experimental models to investigate communication between immune cells and fibroblasts. CCR2-positive macrophages were associated with disease-related FAP/POSTN-positive fibroblast populations, and IL-1β emerged as an important signaling mediator. Disrupting fibroblast IL-1 signaling in mice reduced pathological fibroblast expansion and fibrosis, providing functional support for the interaction suggested by the human data."
+        },
+        {
+          "title": "Chromatin remodelling drives immune cell–fibroblast communication in heart failure",
+          "authors": "Alexanian et al.",
+          "journal": "Nature",
+          "year": 2024,
+          "url": "https://www.nature.com/articles/s41586-024-08085-6?utm_source=chatgpt.com",
+          "summary": "This study investigated how inflammatory macrophages activate profibrotic signaling during pressure overload. BRD4 controlled stress-responsive IL-1β expression in infiltrating CX3CR1-positive macrophages, linking macrophage chromatin regulation to fibroblast activation. BRD4 deletion or BET inhibition reduced harmful inflammatory and fibrotic programs and preserved cardiac function in mice."
+        },
+        {
+          "title": "Self-renewing resident cardiac macrophages limit adverse remodeling following myocardial infarction",
+          "authors": "Dick et al.",
+          "journal": "Nature Immunology",
+          "year": 2019,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30538339/?utm_source=chatgpt.com",
+          "summary": "Using fate mapping and parabiosis, this study distinguished cardiac macrophage populations by their dependence on circulating monocytes. TIMD4-positive, LYVE1-positive resident macrophages largely maintained themselves locally, while other populations showed greater monocyte replacement. Depleting resident macrophages worsened post-infarction remodeling, supporting a protective role particularly around the vulnerable infarct border region."
+        },
+        {
+          "title": "The human heart contains distinct macrophage subsets with divergent origins and functions",
+          "authors": "Bajpai et al.",
+          "journal": "Nature Medicine",
+          "year": 2018,
+          "url": "https://www.nature.com/articles/s41591-018-0059-x?utm_source=chatgpt.com",
+          "summary": "This study identified distinct CCR2-negative and CCR2-positive macrophage populations in human hearts. CCR2-negative cells were associated with viable myocardium and vascular niches, while CCR2-positive cells were enriched in fibrotic regions and showed stronger inflammatory responses. The findings demonstrate that human cardiac macrophages occupy different tissue environments and cannot be treated as one functionally uniform population."
+        },
+        {
+          "title": "Modulation of subsets of cardiac B lymphocytes improves cardiac function after acute injury",
+          "authors": "Adamo et al.",
+          "journal": "JCI Insight",
+          "year": 2018,
+          "url": "https://doi.org/10.1172/jci.insight.120137?utm_source=chatgpt.com",
+          "summary": "This study examined B-cell involvement in the cardiac benefits of pirfenidone after acute injury in mice. Pirfenidone altered cardiac B-cell populations without reducing neutrophil, monocyte or macrophage infiltration, and its protective benefit depended on B cells. Its relevance to the macrophage overview is that improved cardiac outcomes can arise through changes in other immune populations without a reduction in myeloid-cell numbers."
+        },
+        {
+          "title": "Cardiac fibrosis",
+          "authors": "Frangogiannis",
+          "journal": "Cardiovascular Research",
+          "year": 2021,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=33135058&utm_source=chatgpt.com",
+          "summary": "This review summarizes the cellular and molecular mechanisms responsible for cardiac fibrosis. It describes how recruited monocytes and macrophages influence fibroblast activation through cytokines, growth factors and matrix-regulating proteins. The review provides a broader framework for understanding how inflammation, mechanical signals and extracellular matrix remodeling interact across different cardiac diseases."
+        },
+        {
+          "title": "Repair of the Infarcted Heart: Cellular Effectors, Molecular Mechanisms and Therapeutic Opportunities",
+          "authors": "Hilgendorf, Frantz and Frangogiannis",
+          "journal": "Circulation Research",
+          "year": 2024,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38843294/?utm_source=chatgpt.com",
+          "summary": "This review integrates the cellular events that coordinate healing after myocardial infarction. It describes how danger signals recruit inflammatory cells, how macrophages clear dying cells and help resolve inflammation, and how subsequent signals support fibroblast activity and scar stabilization. It also explains how disruption of the timing or intensity of these responses can lead to persistent inflammation, scar expansion or defective repair."
+        }
+      ],
+      cardiomyocytes: [
+        {
+          title: 'miR-24-3p secreted as extracellular vesicle cargo by cardiomyocytes inhibits fibrosis in human cardiac microtissues',
+          authors: 'Senesi et al.', journal: 'Cardiovascular Research', year: 2025,
+          url: 'https://academic.oup.com/cardiovascres/article/121/1/143/7890765?login=false&utm_source=chatgpt.com',
+          summary: 'Using human cardiac cells, microtissues and tissue slices, this study investigated how cardiomyocytes influence fibroblast activation through extracellular vesicles. Cardiomyocyte-derived vesicles carried miR-24-3p, which restrained fibroblast activation and collagen production. Ischemia-like conditions reduced this protective cargo and weakened its antifibrotic effect. Berberine restored miR-24-3p and reduced fibrosis-related readouts in the experimental models; blocking miR-24-3p prevented this benefit.'
+        },
+        {
+          title: 'Senescent cardiomyocytes contribute to cardiac dysfunction following myocardial infarction',
+          authors: 'Redgrave et al.', journal: 'npj Aging', year: 2023,
+          url: 'https://pubmed.ncbi.nlm.nih.gov/37316516/?utm_source=chatgpt.com',
+          summary: 'This mouse study tested whether senescent cardiomyocytes contribute to harmful remodeling after ischemia and reperfusion. Deleting the senescence-associated gene p16 specifically in cardiomyocytes reduced senescence markers and scar size and improved the heart’s pumping function. Whole-heart IL-6 levels and senescence markers in surrounding interstitial cells also decreased. These findings support a harmful role for cardiomyocyte senescence, although direct transmission of senescence from cardiomyocytes to fibroblasts through IL-6 was not established.'
+        },
+        {
+          title: 'Cardiomyocyte NOX4 regulates resident macrophage-mediated inflammation and diastolic dysfunction in stress cardiomyopathy',
+          authors: 'Vendrov et al.', journal: 'Redox Biology', year: 2023,
+          url: 'https://pubmed.ncbi.nlm.nih.gov/37871532/?utm_source=chatgpt.com',
+          summary: 'In a mouse model of excessive sympathetic stimulation, cardiomyocyte NOX4 increased mitochondrial oxidative stress alongside changes in resident macrophage populations. This was followed by interstitial collagen accumulation and impaired ventricular relaxation. Cardiomyocyte-specific Nox4 deletion reduced fibrosis and preserved diastolic function, with similar protection observed using the NOX1/4 inhibitor GKT137831. The measured cardiomyocyte-death markers did not increase significantly, supporting a route from cardiomyocyte stress to fibrosis without extensive detected muscle-cell loss.'
+        },
+        {
+          title: 'Retinoic acid signaling is directly activated in cardiomyocytes and protects mouse hearts from apoptosis after myocardial infarction',
+          authors: 'Da Silva et al.', journal: 'eLife', year: 2021,
+          url: 'https://elifesciences.org/articles/68280v1?utm_source=chatgpt.com',
+          summary: 'Using a genetic reporter, the researchers showed that cardiomyocytes respond directly to retinoic acid during development and after myocardial infarction in mice. Deleting the retinoic-acid-producing enzymes Aldh1a1, Aldh1a2 and Aldh1a3 increased cardiomyocyte apoptosis after injury. This supports a protective role for retinoic acid signaling in cardiomyocyte survival. Tgm2 and Ace1 were identified as potential downstream targets, but their contribution to this protection remains unresolved.'
+        },
+        {
+          title: 'Cardiomyocytes stimulate angiogenesis after ischemic injury in a ZEB2-dependent manner',
+          authors: 'Gladka et al.', journal: 'Nature Communications', year: 2021,
+          url: 'https://pubmed.ncbi.nlm.nih.gov/33398012/?utm_source=chatgpt.com',
+          summary: 'This study investigated how injured cardiomyocytes communicate with endothelial cells to support blood-vessel growth. Ischemic injury increased cardiomyocyte ZEB2, which promoted the secretion of thymosin β4 and prothymosin α. Conditioned-medium and knockdown experiments linked these signals to endothelial proliferation-related responses and sprouting. The findings identify a cardiomyocyte-driven mechanism that supports vascular repair after ischemic injury.'
+        },
+        {
+          title: 'Cardiac fibroblasts regulate the development of heart failure via Htra3-TGF-β-IGFBP7 axis',
+          authors: 'Ko et al.', journal: 'Nature Communications', year: 2022,
+          url: 'https://pubmed.ncbi.nlm.nih.gov/35672400/?utm_source=chatgpt.com',
+          summary: 'This study identified fibroblast-derived HTRA3 as an extracellular brake on TGF-β signaling. Under pressure overload or after Htra3 loss, cardiomyocytes developed increased NOX4-associated oxidative stress, DNA damage and a p53-linked failing, secretory state. Reducing Nox4 improved cardiac function, while restoring Htra3 reduced fibrosis and dysfunction in mice. The findings show how changes in fibroblast signaling can push cardiomyocytes toward a state that further sustains adverse remodeling.'
+        },
+        {
+          title: 'Resident cardiac macrophages mediate adaptive myocardial remodeling',
+          authors: 'Wong et al.', journal: 'Immunity', year: 2021,
+          url: 'https://www.sciencedirect.com/science/article/pii/S1074761321002892?utm_source=chatgpt.com',
+          summary: 'In a genetic mouse model of dilated cardiomyopathy, resident CCR2-negative macrophages maintained physical contacts with cardiomyocytes through focal-adhesion-associated structures. Mechanical stretch activated macrophage TRPV4-dependent growth-factor programs, including Igf1, Pdgfc and Hbegf. Depleting these macrophages reduced coronary vascularity, increased fibrosis and worsened cardiac function and survival. The study therefore identifies a protective interaction in which resident macrophages sense myocardial mechanical changes and support adaptation.'
+        },
+        {
+          title: 'BMP7 promotes cardiomyocyte regeneration in zebrafish and adult mice',
+          authors: 'Bongiovanni et al.', journal: 'Cell Reports', year: 2024,
+          url: 'https://pubmed.ncbi.nlm.nih.gov/38678558/?utm_source=chatgpt.com',
+          summary: 'This study examined whether BMP7 can stimulate cardiomyocyte cell-cycle activity in mouse and zebrafish models. BMP7 increased cycling-related readouts in cultured mouse cardiomyocytes and adult mouse hearts after infarction, while zebrafish genetic experiments supported its role in post-injury cardiomyocyte cycling. These responses involved SMAD5, ERK and AKT signaling, and inhibiting ERK or AKT blocked BMP7-induced DNA synthesis in culture. The adult mouse findings summarized in your tables demonstrate increased cycling markers, which alone do not establish completed cell division or full functional heart regeneration.'
+        },
+        {
+          title: 'Cardiac fibrosis: Cell biological mechanisms, molecular pathways and therapeutic opportunities',
+          authors: 'Frangogiannis', journal: 'Molecular Aspects of Medicine', year: 2019,
+          url: 'https://pubmed.ncbi.nlm.nih.gov/30056242/?utm_source=chatgpt.com',
+          summary: 'This review explains how different forms of cardiac injury lead to distinct patterns of fibrosis. After myocardial infarction, dying cardiomyocytes release danger signals that initiate inflammation and replacement scar formation. In chronic conditions, stressed surviving cardiomyocytes can instead promote interstitial and perivascular fibrosis through signals to neighboring cells. It provides the conceptual framework for distinguishing necessary scar repair after muscle loss from excessive matrix accumulation that increases myocardial stiffness.'
+        },
+        {
+          title: 'Single-nucleus RNA sequencing in ischemic cardiomyopathy reveals common transcriptional profile underlying end-stage heart failure',
+          authors: 'Simonson et al.', journal: 'Cell Reports', year: 2023,
+          url: 'https://pubmed.ncbi.nlm.nih.gov/36790929/?utm_source=chatgpt.com',
+          summary: 'This study used single-nucleus RNA sequencing to characterize human ischemic cardiomyopathy and compared its transcriptional changes with other cardiomyopathy datasets. Cardiomyocytes and other cardiac cell populations showed disease-associated changes, with shared features across different causes of end-stage heart failure. Computational analyses also identified altered potential communication between cardiac cell types. These findings provide human disease context for cardiomyocyte stress and cellular interactions, while the predicted signaling links remain observational.'
+        },
+        {
+          title: 'Location and aetiology are determinants of fibroblast activation and heterogeneity in the failing human heart',
+          authors: 'Youness et al.', journal: 'Genome Medicine', year: 2025,
+          url: 'https://pubmed.ncbi.nlm.nih.gov/41310709/?utm_source=chatgpt.com',
+          summary: 'This human study examined how the cause of heart failure and the location within the myocardium influence fibroblast activation. Ischemic and dilated cardiomyopathy, together with scar and remote myocardial regions, were associated with distinct fibroblast states and tissue environments. For the cardiomyocyte graphical abstract, its main contribution is showing that cellular interactions must be interpreted within their local disease context. The findings do not directly establish a specific causal cardiomyocyte-to-fibroblast signaling pathway.'
+        }
+      ]
+    };
+    const escapeHTML = value => String(value).replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
+    const paperCountLabel = entries => entries.length + (entries.some(paper=>paper.citationStatus) ? ' entries' : ' papers');
+    const main = document.getElementById('main');
+    const dialog = document.getElementById('about-dialog');
+    const arrow = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.3"/></svg>';
+    const sideArrow = direction => '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="'+(direction==='left'?'M20 12H4m6-6-6 6 6 6':'M4 12h16m-6-6 6 6-6 6')+'" stroke="currentColor" stroke-width="1.2"/></svg>';
+    const palette = t => '--panel:'+t.panel+';--edge:'+t.edge+';--tone:'+t.tone;
+    function artwork(t,i,large=false){
+      return '<div class="art'+(large?' detail-art':'')+'" style="'+palette(t)+'" role="img" aria-label="Visual abstract placeholder for '+t.title+'"><span class="art-label">'+(large?'VISUAL ABSTRACT':'LITERATURE ATLAS')+'</span><span class="art-number">0'+(i+1)+'</span><div class="placeholder"><svg class="placeholder-icon" viewBox="0 0 48 40" fill="none" aria-hidden="true"><path d="M12 2H2v10M36 2h10v10M2 28v10h10M46 28v10H36M24 12v16M16 20h16" stroke="currentColor" stroke-width="1"/></svg><span class="placeholder-title">Visual abstract</span><span class="placeholder-note">Coming soon</span></div><span class="art-corner" aria-hidden="true"></span>'+(large?'':'<span class="art-arrow">'+arrow+'</span>')+'</div>';
+    }
+    function renderHome(){
+      document.title='Cardiac Fibrosis — A Literature Atlas';
+      main.innerHTML='<section class="hero" aria-labelledby="home-title"><h1 id="home-title" tabindex="-1">Cardiac fibrosis.</h1><p class="hero-copy">A visual guide to the cells and interactions<br class="desktop-break"> shaping the fibrotic heart.</p><div class="filters" role="group" aria-label="Filter topics"><button class="filter" type="button" data-filter="all" aria-pressed="true">All topics <span>06</span></button><button class="filter" type="button" data-filter="context" aria-pressed="false">The bigger picture <span>02</span></button><button class="filter" type="button" data-filter="cell" aria-pressed="false">Cell types <span>04</span></button></div></section><section class="collection" aria-labelledby="collection-title"><div class="section-line"><h2 id="collection-title">Explore the collection</h2><p id="topic-count" role="status" aria-live="polite">06 topics</p></div><div class="grid">'+topics.map((t,i)=>'<a class="topic-card" href="#/'+t.id+'" data-type="'+t.type+'" style="'+palette(t)+'" aria-label="Explore '+t.title+'">'+artwork(t,i)+'<h3 class="card-title"><span class="dot" aria-hidden="true"></span>'+t.title+'</h3><p class="card-desc">'+t.desc+'</p><p class="card-meta">'+(i===0?'An introduction':papersByTopic[t.id]?.length?paperCountLabel(papersByTopic[t.id]):'Selected literature')+'</p></a>').join('')+'</div><div class="bottom-note"><span>One heart. Many cell types. A shared story of remodelling.</span><span>A collection in progress ↗</span></div></section>';
+    }
+    function papers(topic){
+      const entries = papersByTopic[topic.id];
+      if(entries && entries.length){
+        return '<section class="detail-body" aria-labelledby="papers-title"><div class="content-header"><h2 id="papers-title">Selected literature</h2><span class="status">'+paperCountLabel(entries)+'</span></div>'+entries.map((paper,i)=>'<article class="paper"><span class="paper-number">'+String(i+1).padStart(2,'0')+'</span><div><h3>'+(paper.url?'<a class="paper-title-link" href="'+escapeHTML(paper.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(paper.title)+' <span class="paper-external" aria-hidden="true">'+arrow+'</span></a>':escapeHTML(paper.title))+'</h3><p class="paper-meta">'+escapeHTML(paper.authors)+' · <em>'+escapeHTML(paper.journal)+'</em> · '+paper.year+(paper.citationStatus?' · <span class="citation-status">'+escapeHTML(paper.citationStatus)+'</span>':'')+'</p><p class="paper-summary">'+escapeHTML(paper.summary)+(paper.sources?.length?' '+paper.sources.map(source=>'<a class="paper-source-link" href="'+escapeHTML(source.url)+'" target="_blank" rel="noopener noreferrer">'+escapeHTML(source.label)+'</a>').join(' · '):'')+'</p></div></article>').join('')+'</section>';
+      }
+      return '<section class="detail-body" aria-labelledby="papers-title"><div class="content-header"><h2 id="papers-title">Selected literature</h2><span class="status">Collection in progress</span></div><p class="paper-note">Paper entries will appear here with a brief summary. The entries below are placeholders.</p>'+[1,2,3].map(i=>'<article class="paper"><span class="paper-number" aria-hidden="true">0'+i+'</span><div><h3>Paper title to be added</h3><p class="paper-meta">Author(s) · Year · Journal</p><p class="paper-summary"><span class="summary-label">Brief summary.</span> A few sentences on the study, its main finding, and its relevance to cardiac fibrosis.</p></div></article>').join('')+'</section>';
+    }
+    function renderTopic(t){
+      const i=topics.indexOf(t), previous=topics[i-1], next=topics[i+1];
+      document.title=t.title+' — Cardiac Fibrosis';
+      main.innerHTML='<article class="detail" style="'+palette(t)+'"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="#/">All topics</a><span aria-hidden="true">/</span><span aria-current="page">'+t.short+'</span></nav><div class="detail-heading"><div><p class="eyebrow">'+(t.type==='cell'?'A cellular perspective':'The bigger picture')+'</p><h1 tabindex="-1">'+t.title+'</h1><p class="detail-intro">'+t.intro+'</p></div><span class="chapter">Chapter 0'+(i+1)+'<br>of 06</span></div>'+artwork(t,i,true)+(i===0?'<section class="detail-body" aria-labelledby="overview-title"><div class="content-header"><h2 id="overview-title">The bigger picture</h2><span class="status">An introduction</span></div><div class="overview-copy">'+t.summary.map(p=>'<p>'+p+'</p>').join('')+'</div></section>':papers(t))+'<nav class="chapter-nav" aria-label="Browse topics">'+(previous?'<a href="#/'+previous.id+'">'+sideArrow('left')+'<span><small>Previous topic</small>'+previous.title+'</span></a>':'<a href="#/">'+sideArrow('left')+'<span><small>The collection</small>All topics</span></a>')+(next?'<a class="next-chapter" href="#/'+next.id+'"><span><small>Next topic</small>'+next.title+'</span>'+sideArrow('right')+'</a>':'<a class="next-chapter" href="#/"><span><small>Back to the collection</small>All topics</span>'+sideArrow('right')+'</a>')+'</nav></article>';
+    }
+    function render(focus=false){
+      const route=location.hash.replace(/^#\/?/,'').replace(/\/$/,'');
+      if(route==='main'){if(!main.children.length)renderHome();main.focus();return;}
+      const t=topics.find(t=>t.id===route);
+      if(!route){renderHome();}else if(t){renderTopic(t);}else{document.title='Topic not found — Cardiac Fibrosis';main.innerHTML='<section class="empty"><h1 tabindex="-1">Topic not found.</h1><a href="#/">Return to the collection →</a></section>';}
+      if(focus){window.scrollTo({top:0,behavior:'instant'});main.querySelector('h1').focus({preventScroll:true});}
+    }
+    document.addEventListener('click',event=>{
+      const filter=event.target.closest('[data-filter]');
+      if(filter){
+        document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===filter)));
+        let count=0;document.querySelectorAll('.topic-card').forEach(card=>{card.hidden=filter.dataset.filter!=='all'&&card.dataset.type!==filter.dataset.filter;if(!card.hidden)count++;});
+        document.getElementById('topic-count').textContent=String(count).padStart(2,'0')+' topics';
+      }
+      if(event.target.closest('[data-about]'))dialog.showModal();
+      if(event.target.closest('.close'))dialog.close();
+    });
+    dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
+    window.addEventListener('hashchange',()=>render(true));
+    render();
+  </script>
+</body>
+</html>
