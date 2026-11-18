@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,6 +19,8 @@
     @media(max-width:700px){.header{height:83px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:29px 18px}.hero{padding:55px 0 40px}.hero h1{font-size:61px;letter-spacing:-3px}.hero-copy{font-size:13px;max-width:340px}.eyebrow{font-size:8px;letter-spacing:2px}.art{aspect-ratio:1.25}.art-label{font-size:7px;letter-spacing:1.4px}.art-number{font-size:15px}.placeholder-title{font-size:20px}.placeholder-icon{width:36px;height:29px}.placeholder-note{font-size:7px;letter-spacing:1.6px}.art-arrow{width:15px;right:14px;bottom:14px}.art-corner{width:23px;height:23px;bottom:14px;left:15px}.card-title{font-size:15px;line-height:1.4;align-items:baseline;gap:8px}.card-desc{font-size:10px}.card-meta{font-size:8px}.collection{padding-bottom:48px}.bottom-note{font-size:10px}.bottom-note span:last-child{display:none}.footer{align-items:flex-start}.footer-right{flex-direction:column;align-items:flex-end;gap:11px}.detail-heading{margin-top:37px}.detail-heading h1{font-size:45px;letter-spacing:-1.9px}.detail-intro{font-size:13px}.detail-art{aspect-ratio:1.8;min-height:230px}.detail-body{margin-top:35px}.content-header h2{font-size:27px}.paper{grid-template-columns:25px 1fr;gap:12px}.paper h3{font-size:22px}.chapter-nav a{font-size:11px}.detail{padding-bottom:50px}}
     @media(max-width:420px){.wrap{width:calc(100% - 36px)}.brand{font-size:13px;gap:9px}.brand-mark{width:27px;height:27px}.brand small{font-size:8px;letter-spacing:1.8px}.hero h1{font-size:49px;letter-spacing:-2.4px}.hero .eyebrow{font-size:7px}.filter{padding:9px 13px;font-size:10px}.filters{gap:7px}.grid{grid-template-columns:1fr;gap:30px}.art{aspect-ratio:1.6}.placeholder-title{font-size:25px}.placeholder-icon{width:44px;height:35px}.art-label{font-size:8px;top:19px;left:20px}.art-number{right:20px;top:16px}.card-title{font-size:18px}.card-desc{font-size:12px}.card-meta{font-size:9px}.detail-art{aspect-ratio:1.5}.content-header{align-items:flex-start;flex-direction:column;gap:13px}.detail-heading h1{font-size:40px}.chapter-nav{gap:18px}.chapter-nav svg{width:14px;flex-shrink:0}.chapter-nav a{max-width:47%}.footer-brand{font-size:15px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+    /* Visual abstracts: SVGs in abstracts/<topic-id>.svg replace the placeholder when the file exists */
+    .grid .art{aspect-ratio:16/9}.art.has-image{background:#fafaf8}.detail-art.has-image{aspect-ratio:16/9;min-height:0;max-height:none}.art-image{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;object-fit:cover}.art.has-image>:not(.art-image){display:none}.abstract-actions{margin:12px 0 0;text-align:right;font-size:12px;letter-spacing:.4px;color:var(--muted)}.abstract-actions a{border-bottom:1px solid var(--line);padding-bottom:2px}.abstract-actions a:hover{color:var(--ink);border-color:var(--tone)}
   </style>
 </head>
 <body>
@@ -1272,8 +1275,23 @@
     const arrow = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.3"/></svg>';
     const sideArrow = direction => '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="'+(direction==='left'?'M20 12H4m6-6-6 6 6 6':'M4 12h16m-6-6 6 6-6 6')+'" stroke="currentColor" stroke-width="1.2"/></svg>';
     const palette = t => '--panel:'+t.panel+';--edge:'+t.edge+';--tone:'+t.tone;
+    const abstractPath = t => 'abstracts/'+t.id+'.svg';
+    const abstractStatus = {};
+    function abstractLoaded(img){
+      const box=img.parentElement, t=topics.find(topic=>topic.id===box.dataset.topic);
+      if(!t)return;
+      abstractStatus[t.id]=true;
+      box.classList.add('has-image');box.removeAttribute('role');box.removeAttribute('aria-label');
+      if(box.classList.contains('detail-art')&&!box.querySelector('object')){
+        const figure=document.createElement('object');
+        figure.type='image/svg+xml';figure.data=abstractPath(t);figure.className='art-image';figure.title='Visual abstract: '+t.title;
+        box.replaceChild(figure,img);
+        if(!box.nextElementSibling?.classList.contains('abstract-actions'))box.insertAdjacentHTML('afterend','<p class="abstract-actions"><a href="'+abstractPath(t)+'" target="_blank" rel="noopener">Open full size ↗</a></p>');
+      }
+    }
+    function abstractMissing(img){abstractStatus[img.parentElement.dataset.topic]=false;img.remove();}
     function artwork(t,i,large=false){
-      return '<div class="art'+(large?' detail-art':'')+'" style="'+palette(t)+'" role="img" aria-label="Visual abstract placeholder for '+t.title+'"><span class="art-label">'+(large?'VISUAL ABSTRACT':'LITERATURE ATLAS')+'</span><span class="art-number">0'+(i+1)+'</span><div class="placeholder"><svg class="placeholder-icon" viewBox="0 0 48 40" fill="none" aria-hidden="true"><path d="M12 2H2v10M36 2h10v10M2 28v10h10M46 28v10H36M24 12v16M16 20h16" stroke="currentColor" stroke-width="1"/></svg><span class="placeholder-title">Visual abstract</span><span class="placeholder-note">Coming soon</span></div><span class="art-corner" aria-hidden="true"></span>'+(large?'':'<span class="art-arrow">'+arrow+'</span>')+'</div>';
+      return '<div class="art'+(large?' detail-art':'')+(abstractStatus[t.id]?' has-image':'')+'" data-topic="'+t.id+'" style="'+palette(t)+'" role="img" aria-label="Visual abstract placeholder for '+t.title+'"><span class="art-label">'+(large?'VISUAL ABSTRACT':'LITERATURE ATLAS')+'</span><span class="art-number">0'+(i+1)+'</span><div class="placeholder"><svg class="placeholder-icon" viewBox="0 0 48 40" fill="none" aria-hidden="true"><path d="M12 2H2v10M36 2h10v10M2 28v10h10M46 28v10H36M24 12v16M16 20h16" stroke="currentColor" stroke-width="1"/></svg><span class="placeholder-title">Visual abstract</span><span class="placeholder-note">Coming soon</span></div><span class="art-corner" aria-hidden="true"></span>'+(large?'':'<span class="art-arrow">'+arrow+'</span>')+(abstractStatus[t.id]===false?'':'<img class="art-image" src="'+abstractPath(t)+'" alt="" decoding="async" onload="abstractLoaded(this)" onerror="abstractMissing(this)">')+'</div>';
     }
     function renderHome(){
       document.title='Cardiac Fibrosis — A Literature Atlas';
