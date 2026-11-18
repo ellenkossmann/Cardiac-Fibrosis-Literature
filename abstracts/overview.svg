@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2560" height="1440" viewBox="0 0 2560 1440" version="1.1" role="img" aria-labelledby="figure-title figure-description">
+  <title id="figure-title">Cardiac fibrosis: a cellular overview</title>
+  <desc id="figure-description">A concise editable 16:9 light-mode overview matching the previous cell-type visual abstracts. Four cards summarize endothelial cells, fibroblasts, macrophages/monocytes and cardiomyocytes with three key points each. A central circular panel presents three selected interaction themes: macrophage-to-fibroblast activation, cardiomyocyte-to-endothelial vascular growth, and cardiomyocyte–fibroblast inhibitory control. Connectors indicate participation in the network, not additional causal pathways. Sixteen numbered DOI references are clickable and have full citation tooltips.</desc>
+  <metadata>{"purpose": "Concise overview of the four previously illustrated cell types and three selected interaction themes", "source_context": ["Endothelial-cell literature workbook and graphical abstract", "Fibroblast literature workbook/CSV and graphical abstract", "Macrophage literature workbook/CSV and graphical abstract", "Cardiomyocyte paper index/findings and graphical abstract", "Table1_Paper_Index.xlsx", "Table2_Interaction_Findings.xlsx"], "selection": "Three points per cell type and three representative experimentally investigated interaction themes; not an exhaustive interaction atlas", "references": [{"number": 1, "authors": "Tombor et al.", "year": 2021, "journal": "Nature Communications", "title": "Single cell sequencing reveals endothelial plasticity with transient mesenchymal activation after myocardial infarction", "doi": "10.1038/s41467-021-20905-1"}, {"number": 2, "authors": "Tombor et al.", "year": 2025, "journal": "Circulation Research", "title": "Immunoregulatory Endothelial Cells Interact With T Cells After Myocardial Infarction", "doi": "10.1161/CIRCRESAHA.125.326145"}, {"number": 3, "authors": "Peisker et al.", "year": 2022, "journal": "Nature Communications", "title": "Mapping the cardiac vascular niche in heart failure", "doi": "10.1038/s41467-022-30682-0"}, {"number": 4, "authors": "Kanisicak et al.", "year": 2016, "journal": "Nature Communications", "title": "Genetic lineage tracing defines myofibroblast origin and function in the injured heart", "doi": "10.1038/ncomms12260"}, {"number": 5, "authors": "Fu et al.", "year": 2018, "journal": "Journal of Clinical Investigation", "title": "Specialized fibroblast differentiated states underlie scar formation in the infarcted mouse heart", "doi": "10.1172/JCI98215"}, {"number": 6, "authors": "Frangogiannis", "year": 2021, "journal": "Cardiovascular Research", "title": "Cardiac fibrosis", "doi": "10.1093/cvr/cvaa324"}, {"number": 7, "authors": "Nicolás-Ávila et al.", "year": 2020, "journal": "Cell", "title": "A Network of Macrophages Supports Mitochondrial Homeostasis in the Heart", "doi": "10.1016/j.cell.2020.08.031"}, {"number": 8, "authors": "Revelo et al.", "year": 2021, "journal": "Circulation Research", "title": "Cardiac Resident Macrophages Prevent Fibrosis and Stimulate Angiogenesis", "doi": "10.1161/CIRCRESAHA.121.319737"}, {"number": 9, "authors": "Vendrov et al.", "year": 2023, "journal": "Redox Biology", "title": "Cardiomyocyte NOX4 regulates resident macrophage-mediated inflammation and diastolic dysfunction in stress cardiomyopathy", "doi": "10.1016/j.redox.2023.102937"}, {"number": 10, "authors": "Redgrave et al.", "year": 2023, "journal": "npj Aging", "title": "Senescent cardiomyocytes contribute to cardiac dysfunction following myocardial infarction", "doi": "10.1038/s41514-023-00113-5"}, {"number": 11, "authors": "Senesi et al.", "year": 2025, "journal": "Cardiovascular Research", "title": "miR-24-3p secreted as extracellular vesicle cargo by cardiomyocytes inhibits fibrosis in human cardiac microtissues", "doi": "10.1093/cvr/cvae243"}, {"number": 12, "authors": "Gladka et al.", "year": 2021, "journal": "Nature Communications", "title": "Cardiomyocytes stimulate angiogenesis after ischemic injury in a ZEB2-dependent manner", "doi": "10.1038/s41467-020-20361-3"}, {"number": 13, "authors": "Parthiban et al.", "year": 2025, "journal": "Circulation Research", "title": "Macrophage-Derived CCL24 Promotes Cardiac Fibrosis Via Fibroblast CCR3", "doi": "10.1161/CIRCRESAHA.125.326599"}, {"number": 14, "authors": "Shumliakivska et al.", "year": 2024, "journal": "Nature Communications", "title": "DNMT3A clonal hematopoiesis-driver mutations induce cardiac fibrosis by paracrine activation of fibroblasts", "doi": "10.1038/s41467-023-43003-w"}, {"number": 15, "authors": "Ko et al.", "year": 2022, "journal": "Nature Communications", "title": "Cardiac fibroblasts regulate the development of heart failure via Htra3-TGF-β-IGFBP7 axis", "doi": "10.1038/s41467-022-30630-y"}, {"number": 16, "authors": "Błyszczuk et al.", "year": 2020, "journal": "Cells", "title": "Activated Cardiac Fibroblasts Control Contraction of Human Fibrotic Cardiac Microtissues by a β-Adrenoreceptor-Dependent Mechanism", "doi": "10.3390/cells9051270"}], "interpretation_notes": ["The four cell-type cards summarize their roles, not immutable cell categories or a universal temporal trajectory.", "Connectors to the circular panel denote participation in a shared network and carry no directional causal claim. Arrows inside labels identify the selected source/receiver relationship.", "Resident fibroblasts are a predominant matrix source in studied models, not the exclusive source of every ECM component.", "Endothelial mesenchymal activation is distinguished from permanent endothelial-to-fibroblast conversion; source 1 supports transient plasticity.", "Macrophage functions depend on origin, state, compartment and injury. Resident does not mean uniformly protective. Exophers containing mitochondrial cargo are distinct from small EV miRNA cargo.", "CM p16 and Nox4 genetic perturbations support their remodeling roles. A direct CM-IL6-to-fibroblast senescence mechanism is not asserted.", "CCL24–CCR3 and HB-EGF–EGFR are distinct experimentally tested myeloid-to-fibroblast mechanisms; they are not drawn as one obligatory cascade.", "ZEB2 is a cardiomyocyte transcriptional regulator; the secreted signals acting on endothelium include TMSB4/PTMA.", "miR24 EV cargo originates in cardiomyocytes in the cited experiments. Fibroblast HTRA3 regulates extracellular TGF-beta and is not a CM-intrinsic product.", "The interaction themes combine evidence from different models and species; the figure does not claim universal human efficacy or propose a combined treatment regimen.", "Reference numbering is local to this overview and independent of all preceding abstracts."]}</metadata>
+  <defs>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#168677" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#796398" />
+    </marker>
+    <marker id="arrow-coral" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#CA7668" />
+    </marker>
+    <marker id="arrow-sage" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#6A835E" />
+    </marker>
+    <marker id="arrow-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#5D6D76" />
+    </marker>
+    <style>text{font-family:Arial,Helvetica,sans-serif;}a{cursor:pointer;}a:hover .ref-bg{fill:#D7EAE4;stroke:#168677;}</style>
+  </defs>
+  <rect x="0" y="0" width="2560" height="1440" rx="0" fill="#FBFCFA" />
+  <rect x="48" y="46" width="8" height="92" rx="4" fill="#168677" />
+  <text x="78" y="94" font-size="60" fill="#203644" font-weight="700" text-anchor="start" letter-spacing="-1.2px" id="label-0018">Cardiac fibrosis: a cellular overview</text>
+  <text x="80" y="136" font-size="28" fill="#5D6D76" text-anchor="start" id="label-0019">Four cell types and three interaction themes that shape injury, scar formation and repair</text>
+  <rect x="2114" y="56" width="398" height="28" rx="14" fill="#EDF2E8" />
+  <text x="2313.0" y="76" font-size="19" fill="#6A835E" font-weight="700" text-anchor="middle" id="label-0021">CARDIAC FIBROSIS OVERVIEW</text>
+  <text x="2512" y="117" font-size="22" fill="#5D6D76" text-anchor="end" id="label-0022">4 cell types  /  3 interaction themes</text>
+  <path d="M898 491 C956 491 964 553 1017 570" fill="none" stroke="#168677" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity=".55" />
+  <path d="M1662 491 C1604 491 1596 553 1543 570" fill="none" stroke="#CA7668" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity=".55" />
+  <path d="M898 925 C960 925 965 916 1017 902" fill="none" stroke="#6A835E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity=".55" />
+  <path d="M1662 925 C1600 925 1595 916 1543 902" fill="none" stroke="#796398" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity=".55" />
+  <g id="endothelial-overview" data-reference-numbers="1 2 3">
+    <title>Endothelial cells: Perfusion and vascular repair. Maintain the microvascular bed and mount angiogenic responses. Immune regulation. Control leukocyte trafficking and inflammatory communication. Injury-induced plasticity. Transient mesenchymal programs do not establish fibroblast fate.</title>
+    <rect x="48" y="230" width="850" height="430" rx="22" fill="#FFFFFF" stroke="#DDE6E5" stroke-width="1.5" />
+    <rect x="48" y="230" width="850" height="94" rx="21" fill="#115D56" />
+    <rect x="48" y="278" width="850" height="46" rx="0" fill="#115D56" />
+    <text x="78" y="267" font-size="17" fill="#DFEBE5" font-weight="700" text-anchor="start" letter-spacing="1.3px" id="label-0032">THE VASCULAR INTERFACE</text>
+    <text x="78" y="306" font-size="35" fill="#FFFFFF" font-weight="700" text-anchor="start" id="label-0033">Endothelial cells</text>
+    <rect x="686" y="245" width="185" height="65" rx="33" fill="#E8F4F0" />
+    <g transform="translate(779 278)">
+      <rect x="-83" y="-25" width="166" height="50" rx="25" fill="#FFFFFF" stroke="#168677" stroke-width="2.3" />
+      <line x1="-59" y1="-18" x2="59" y2="-18" stroke="#BCDCD2" stroke-width="8" stroke-linecap="round" />
+      <ellipse cx="-48" cy="-18" rx="8" ry="4" fill="#168677" opacity=".7" />
+      <ellipse cx="0" cy="-18" rx="8" ry="4" fill="#168677" opacity=".7" />
+      <ellipse cx="48" cy="-18" rx="8" ry="4" fill="#168677" opacity=".7" />
+      <line x1="-59" y1="18" x2="59" y2="18" stroke="#BCDCD2" stroke-width="8" stroke-linecap="round" />
+      <ellipse cx="-48" cy="18" rx="8" ry="4" fill="#168677" opacity=".7" />
+      <ellipse cx="0" cy="18" rx="8" ry="4" fill="#168677" opacity=".7" />
+      <ellipse cx="48" cy="18" rx="8" ry="4" fill="#168677" opacity=".7" />
+      <ellipse cx="-32" cy="0" rx="13" ry="6" fill="#DFA395" />
+      <ellipse cx="20" cy="0" rx="13" ry="6" fill="#DFA395" />
+    </g>
+    <circle cx="83" cy="365" r="4.3" fill="#115D56" />
+    <text x="103" y="373" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0048">Perfusion and vascular repair</text>
+    <text x="103" y="408" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0049">Maintain the microvascular bed and mount angiogenic responses.</text>
+    <circle cx="83" cy="456" r="4.3" fill="#115D56" />
+    <text x="103" y="464" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0051">Immune regulation</text>
+    <text x="103" y="499" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0052">Control leukocyte trafficking and inflammatory communication.</text>
+    <circle cx="83" cy="547" r="4.3" fill="#115D56" />
+    <text x="103" y="555" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0054">Injury-induced plasticity</text>
+    <text x="103" y="590" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0055">Transient mesenchymal programs do not establish fibroblast fate.</text>
+    <a href="https://doi.org/10.1038/s41467-021-20905-1" target="_blank" aria-label="Reference 1: Tombor et al. (2021). Single cell sequencing reveals endothelial plasticity with transient mesenchymal activation after myocardial infarction" xlink:href="https://doi.org/10.1038/s41467-021-20905-1">
+      <title>[1] Tombor et al. (2021). Single cell sequencing reveals endothelial plasticity with transient mesenchymal activation after myocardial infarction. Nature Communications. DOI: 10.1038/s41467-021-20905-1</title>
+      <rect x="763" y="621" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="778" y="641.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0059">1</text>
+    </a>
+    <a href="https://doi.org/10.1161/CIRCRESAHA.125.326145" target="_blank" aria-label="Reference 2: Tombor et al. (2025). Immunoregulatory Endothelial Cells Interact With T Cells After Myocardial Infarction" xlink:href="https://doi.org/10.1161/CIRCRESAHA.125.326145">
+      <title>[2] Tombor et al. (2025). Immunoregulatory Endothelial Cells Interact With T Cells After Myocardial Infarction. Circulation Research. DOI: 10.1161/CIRCRESAHA.125.326145</title>
+      <rect x="798" y="621" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="813" y="641.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0063">2</text>
+    </a>
+    <a href="https://doi.org/10.1038/s41467-022-30682-0" target="_blank" aria-label="Reference 3: Peisker et al. (2022). Mapping the cardiac vascular niche in heart failure" xlink:href="https://doi.org/10.1038/s41467-022-30682-0">
+      <title>[3] Peisker et al. (2022). Mapping the cardiac vascular niche in heart failure. Nature Communications. DOI: 10.1038/s41467-022-30682-0</title>
+      <rect x="833" y="621" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="848" y="641.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0067">3</text>
+    </a>
+  </g>
+  <g id="fibroblast-overview" data-reference-numbers="4 5 6">
+    <title>Fibroblasts: Main matrix-producing cells. Resident fibroblasts expand and remodel ECM after injury. Multiple activation states. Proliferation, myofibroblast activity and scar maturation differ. Signals and mechanics tune output. TGF-β and mechanical cues regulate matrix production.</title>
+    <rect x="1662" y="230" width="850" height="430" rx="22" fill="#FFFFFF" stroke="#DDE6E5" stroke-width="1.5" />
+    <rect x="1662" y="230" width="850" height="94" rx="21" fill="#CA7668" />
+    <rect x="1662" y="278" width="850" height="46" rx="0" fill="#CA7668" />
+    <text x="1692" y="267" font-size="17" fill="#DFEBE5" font-weight="700" text-anchor="start" letter-spacing="1.3px" id="label-0073">THE MATRIX-REMODELING RESPONSE</text>
+    <text x="1692" y="306" font-size="35" fill="#FFFFFF" font-weight="700" text-anchor="start" id="label-0074">Fibroblasts</text>
+    <rect x="2300" y="245" width="185" height="65" rx="33" fill="#FCF0EB" />
+    <g transform="translate(2348 279) scale(0.72)">
+      <path d="M-47 15 L-19-4 L-10-32 L3-11 L41-20 L20 1 L44 30 L9 15 L-20 32 L-12 13 Z" fill="#FCF0EB" stroke="#CA7668" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+      <ellipse cx="0" cy="0" rx="12" ry="7" fill="#D99585" transform="rotate(-25)" />
+    </g>
+    <path d="M2386 265 C2410 259 2447 271 2473 265" fill="none" stroke="#CA7668" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M2386 274 C2410 268 2447 280 2473 274" fill="none" stroke="#CA7668" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M2386 283 C2410 277 2447 289 2473 283" fill="none" stroke="#CA7668" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M2386 292 C2410 286 2447 298 2473 292" fill="none" stroke="#CA7668" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="1697" cy="365" r="4.3" fill="#CA7668" />
+    <text x="1717" y="373" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0084">Main matrix-producing cells</text>
+    <text x="1717" y="408" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0085">Resident fibroblasts expand and remodel ECM after injury.</text>
+    <circle cx="1697" cy="456" r="4.3" fill="#CA7668" />
+    <text x="1717" y="464" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0087">Multiple activation states</text>
+    <text x="1717" y="499" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0088">Proliferation, myofibroblast activity and scar maturation differ.</text>
+    <circle cx="1697" cy="547" r="4.3" fill="#CA7668" />
+    <text x="1717" y="555" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0090">Signals and mechanics tune output</text>
+    <text x="1717" y="590" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0091">TGF-β and mechanical cues regulate matrix production.</text>
+    <a href="https://doi.org/10.1038/ncomms12260" target="_blank" aria-label="Reference 4: Kanisicak et al. (2016). Genetic lineage tracing defines myofibroblast origin and function in the injured heart" xlink:href="https://doi.org/10.1038/ncomms12260">
+      <title>[4] Kanisicak et al. (2016). Genetic lineage tracing defines myofibroblast origin and function in the injured heart. Nature Communications. DOI: 10.1038/ncomms12260</title>
+      <rect x="2377" y="621" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="2392" y="641.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0095">4</text>
+    </a>
+    <a href="https://doi.org/10.1172/JCI98215" target="_blank" aria-label="Reference 5: Fu et al. (2018). Specialized fibroblast differentiated states underlie scar formation in the infarcted mouse heart" xlink:href="https://doi.org/10.1172/JCI98215">
+      <title>[5] Fu et al. (2018). Specialized fibroblast differentiated states underlie scar formation in the infarcted mouse heart. Journal of Clinical Investigation. DOI: 10.1172/JCI98215</title>
+      <rect x="2412" y="621" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="2427" y="641.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0099">5</text>
+    </a>
+    <a href="https://doi.org/10.1093/cvr/cvaa324" target="_blank" aria-label="Reference 6: Frangogiannis (2021). Cardiac fibrosis" xlink:href="https://doi.org/10.1093/cvr/cvaa324">
+      <title>[6] Frangogiannis (2021). Cardiac fibrosis. Cardiovascular Research. DOI: 10.1093/cvr/cvaa324</title>
+      <rect x="2447" y="621" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="2462" y="641.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0103">6</text>
+    </a>
+  </g>
+  <g id="macrophage-overview" data-reference-numbers="7 8 13 14">
+    <title>Monocytes / macrophages: Clear damage and support repair. Remove dying cells and cardiomyocyte mitochondrial cargo. Tune fibroblast and vascular responses. Secreted signals can support healing or sustain fibrosis. Origin and state matter. Resident and recruited populations have context-specific roles.</title>
+    <rect x="48" y="730" width="850" height="430" rx="22" fill="#FFFFFF" stroke="#DDE6E5" stroke-width="1.5" />
+    <rect x="48" y="730" width="850" height="94" rx="21" fill="#6A835E" />
+    <rect x="48" y="778" width="850" height="46" rx="0" fill="#6A835E" />
+    <text x="78" y="767" font-size="17" fill="#DFEBE5" font-weight="700" text-anchor="start" letter-spacing="1.3px" id="label-0109">CLEARANCE AND IMMUNE CONTROL</text>
+    <text x="78" y="806" font-size="35" fill="#FFFFFF" font-weight="700" text-anchor="start" id="label-0110">Monocytes / macrophages</text>
+    <rect x="686" y="745" width="185" height="65" rx="33" fill="#FAF2E2" />
+    <g transform="translate(782 779) scale(0.75)">
+      <path d="M-32-11 C-42-29-18-42-3-31 C12-45 30-25 27-12 C44-4 35 19 20 22 C12 41-9 35-16 25 C-37 28-44 8-32-11 Z" fill="#FAF2E2" stroke="#C59B52" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M-9-14 C8-25 20-9 10 0 C1 4 16 17 2 20 C-14 26-27 6-17-3 C-11-7-14-11-9-14 Z" fill="#C59B52" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="-26" cy="-17" r="3" fill="#C59B52" opacity=".4" />
+      <circle cx="22" cy="6" r="3" fill="#C59B52" opacity=".4" />
+      <circle cx="12" cy="-23" r="3" fill="#C59B52" opacity=".4" />
+      <circle cx="-27" cy="12" r="3" fill="#C59B52" opacity=".4" />
+    </g>
+    <circle cx="729" cy="780" r="8" fill="#FCF0EB" stroke="#CA7668" stroke-width="1.3" />
+    <line x1="743" y1="780" x2="752" y2="780" stroke="#6A835E" stroke-width="2.8" stroke-linecap="round" marker-end="url(#arrow-sage)" />
+    <circle cx="83" cy="865" r="4.3" fill="#6A835E" />
+    <text x="103" y="873" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0122">Clear damage and support repair</text>
+    <text x="103" y="908" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0123">Remove dying cells and cardiomyocyte mitochondrial cargo.</text>
+    <circle cx="83" cy="956" r="4.3" fill="#6A835E" />
+    <text x="103" y="964" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0125">Tune fibroblast and vascular responses</text>
+    <text x="103" y="999" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0126">Secreted signals can support healing or sustain fibrosis.</text>
+    <circle cx="83" cy="1047" r="4.3" fill="#6A835E" />
+    <text x="103" y="1055" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0128">Origin and state matter</text>
+    <text x="103" y="1090" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0129">Resident and recruited populations have context-specific roles.</text>
+    <a href="https://doi.org/10.1016/j.cell.2020.08.031" target="_blank" aria-label="Reference 7: Nicolás-Ávila et al. (2020). A Network of Macrophages Supports Mitochondrial Homeostasis in the Heart" xlink:href="https://doi.org/10.1016/j.cell.2020.08.031">
+      <title>[7] Nicolás-Ávila et al. (2020). A Network of Macrophages Supports Mitochondrial Homeostasis in the Heart. Cell. DOI: 10.1016/j.cell.2020.08.031</title>
+      <rect x="728" y="1121" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="743" y="1141.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0133">7</text>
+    </a>
+    <a href="https://doi.org/10.1161/CIRCRESAHA.121.319737" target="_blank" aria-label="Reference 8: Revelo et al. (2021). Cardiac Resident Macrophages Prevent Fibrosis and Stimulate Angiogenesis" xlink:href="https://doi.org/10.1161/CIRCRESAHA.121.319737">
+      <title>[8] Revelo et al. (2021). Cardiac Resident Macrophages Prevent Fibrosis and Stimulate Angiogenesis. Circulation Research. DOI: 10.1161/CIRCRESAHA.121.319737</title>
+      <rect x="763" y="1121" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="778" y="1141.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0137">8</text>
+    </a>
+    <a href="https://doi.org/10.1161/CIRCRESAHA.125.326599" target="_blank" aria-label="Reference 13: Parthiban et al. (2025). Macrophage-Derived CCL24 Promotes Cardiac Fibrosis Via Fibroblast CCR3" xlink:href="https://doi.org/10.1161/CIRCRESAHA.125.326599">
+      <title>[13] Parthiban et al. (2025). Macrophage-Derived CCL24 Promotes Cardiac Fibrosis Via Fibroblast CCR3. Circulation Research. DOI: 10.1161/CIRCRESAHA.125.326599</title>
+      <rect x="798" y="1121" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="813" y="1141.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0141">13</text>
+    </a>
+    <a href="https://doi.org/10.1038/s41467-023-43003-w" target="_blank" aria-label="Reference 14: Shumliakivska et al. (2024). DNMT3A clonal hematopoiesis-driver mutations induce cardiac fibrosis by paracrine activation of fibroblasts" xlink:href="https://doi.org/10.1038/s41467-023-43003-w">
+      <title>[14] Shumliakivska et al. (2024). DNMT3A clonal hematopoiesis-driver mutations induce cardiac fibrosis by paracrine activation of fibroblasts. Nature Communications. DOI: 10.1038/s41467-023-43003-w</title>
+      <rect x="833" y="1121" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="848" y="1141.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0145">14</text>
+    </a>
+  </g>
+  <g id="cardiomyocyte-overview" data-reference-numbers="9 10 16">
+    <title>Cardiomyocytes: Injury initiates remodeling. Cell loss triggers scar repair; chronic stress changes signaling. Stress contributes to dysfunction. Oxidative damage and senescence promote adverse remodeling. The environment shapes function. Fibroblast signals and matrix changes alter muscle performance.</title>
+    <rect x="1662" y="730" width="850" height="430" rx="22" fill="#FFFFFF" stroke="#DDE6E5" stroke-width="1.5" />
+    <rect x="1662" y="730" width="850" height="94" rx="21" fill="#796398" />
+    <rect x="1662" y="778" width="850" height="46" rx="0" fill="#796398" />
+    <text x="1692" y="767" font-size="17" fill="#DFEBE5" font-weight="700" text-anchor="start" letter-spacing="1.3px" id="label-0151">MUSCLE INJURY AND FUNCTION</text>
+    <text x="1692" y="806" font-size="35" fill="#FFFFFF" font-weight="700" text-anchor="start" id="label-0152">Cardiomyocytes</text>
+    <rect x="2300" y="745" width="185" height="65" rx="33" fill="#F1ECF7" />
+    <g transform="translate(2393 778) scale(0.92)">
+      <path d="M-69-28 Q-78-42-48-36 L46-36 Q79-42 69-22 L72 24 Q78 42 46 36 L-46 36 Q-79 42-69 22 Z" fill="#FCF0EB" stroke="#CA7668" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      <line x1="-51" y1="-29" x2="-51" y2="29" stroke="#DBA294" stroke-width="2.2" stroke-linecap="round" />
+      <line x1="-34" y1="-29" x2="-34" y2="29" stroke="#DBA294" stroke-width="2.2" stroke-linecap="round" />
+      <line x1="-17" y1="-29" x2="-17" y2="29" stroke="#DBA294" stroke-width="2.2" stroke-linecap="round" />
+      <line x1="0" y1="-29" x2="0" y2="29" stroke="#DBA294" stroke-width="2.2" stroke-linecap="round" />
+      <line x1="17" y1="-29" x2="17" y2="29" stroke="#DBA294" stroke-width="2.2" stroke-linecap="round" />
+      <line x1="34" y1="-29" x2="34" y2="29" stroke="#DBA294" stroke-width="2.2" stroke-linecap="round" />
+      <line x1="51" y1="-29" x2="51" y2="29" stroke="#DBA294" stroke-width="2.2" stroke-linecap="round" />
+      <line x1="-60" y1="-17" x2="60" y2="-17" stroke="#EDC3B9" stroke-width="1.6" stroke-linecap="round" />
+      <line x1="-60" y1="17" x2="60" y2="17" stroke="#EDC3B9" stroke-width="1.6" stroke-linecap="round" />
+      <ellipse cx="0" cy="0" rx="20" ry="11" fill="#C9877B" stroke="#FFFFFF" stroke-width="1.5" />
+    </g>
+    <circle cx="1697" cy="865" r="4.3" fill="#796398" />
+    <text x="1717" y="873" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0167">Injury initiates remodeling</text>
+    <text x="1717" y="908" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0168">Cell loss triggers scar repair; chronic stress changes signaling.</text>
+    <circle cx="1697" cy="956" r="4.3" fill="#796398" />
+    <text x="1717" y="964" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0170">Stress contributes to dysfunction</text>
+    <text x="1717" y="999" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0171">Oxidative damage and senescence promote adverse remodeling.</text>
+    <circle cx="1697" cy="1047" r="4.3" fill="#796398" />
+    <text x="1717" y="1055" font-size="28" fill="#203644" font-weight="700" text-anchor="start" id="label-0173">The environment shapes function</text>
+    <text x="1717" y="1090" font-size="23" fill="#5D6D76" text-anchor="start" id="label-0174">Fibroblast signals and matrix changes alter muscle performance.</text>
+    <a href="https://doi.org/10.1016/j.redox.2023.102937" target="_blank" aria-label="Reference 9: Vendrov et al. (2023). Cardiomyocyte NOX4 regulates resident macrophage-mediated inflammation and diastolic dysfunction in stress cardiomyopathy" xlink:href="https://doi.org/10.1016/j.redox.2023.102937">
+      <title>[9] Vendrov et al. (2023). Cardiomyocyte NOX4 regulates resident macrophage-mediated inflammation and diastolic dysfunction in stress cardiomyopathy. Redox Biology. DOI: 10.1016/j.redox.2023.102937</title>
+      <rect x="2377" y="1121" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="2392" y="1141.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0178">9</text>
+    </a>
+    <a href="https://doi.org/10.1038/s41514-023-00113-5" target="_blank" aria-label="Reference 10: Redgrave et al. (2023). Senescent cardiomyocytes contribute to cardiac dysfunction following myocardial infarction" xlink:href="https://doi.org/10.1038/s41514-023-00113-5">
+      <title>[10] Redgrave et al. (2023). Senescent cardiomyocytes contribute to cardiac dysfunction following myocardial infarction. npj Aging. DOI: 10.1038/s41514-023-00113-5</title>
+      <rect x="2412" y="1121" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="2427" y="1141.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0182">10</text>
+    </a>
+    <a href="https://doi.org/10.3390/cells9051270" target="_blank" aria-label="Reference 16: Błyszczuk et al. (2020). Activated Cardiac Fibroblasts Control Contraction of Human Fibrotic Cardiac Microtissues by a β-Adrenoreceptor-Dependent Mechanism" xlink:href="https://doi.org/10.3390/cells9051270">
+      <title>[16] Błyszczuk et al. (2020). Activated Cardiac Fibroblasts Control Contraction of Human Fibrotic Cardiac Microtissues by a β-Adrenoreceptor-Dependent Mechanism. Cells. DOI: 10.3390/cells9051270</title>
+      <rect x="2447" y="1121" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="2462" y="1141.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0186">16</text>
+    </a>
+  </g>
+  <g id="interaction-overview" data-reference-numbers="11 12 13 14 15">
+    <title>Three selected intercellular mechanisms: macrophage CCL24/CCR3 and monocyte HB-EGF/EGFR activate fibroblasts; CM ZEB2-dependent TMSB4/PTMA supports endothelial growth; CM EV miR24 restrains fibroblast activation while fibroblast HTRA3 limits ambient TGF-beta activity. These are findings from different experimental systems, not a combined pathway or treatment regimen.</title>
+    <circle cx="1280" cy="730" r="307" fill="none" stroke="#DDE6E5" stroke-width="1.5" />
+    <path d="M982.1815335483095 719.5999499826546 A298 298 0 0 1 1269.5999499826546 432.18153354830946" fill="none" stroke="#168677" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity=".6" />
+    <path d="M1290.4000500173454 432.18153354830946 A298 298 0 0 1 1577.8184664516905 719.5999499826547" fill="none" stroke="#CA7668" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity=".6" />
+    <path d="M1577.8184664516905 740.4000500173453 A298 298 0 0 1 1290.4000500173454 1027.8184664516905" fill="none" stroke="#796398" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity=".6" />
+    <path d="M1269.5999499826546 1027.8184664516905 A298 298 0 0 1 982.1815335483095 740.4000500173454" fill="none" stroke="#6A835E" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity=".6" />
+    <circle cx="1280" cy="730" r="281" fill="#FFFFFF" stroke="#DDE6E5" stroke-width="1.5" />
+    <path d="M1280 527 C1251 504 1238 484 1249 470 C1258 459 1273 463 1280 474 C1289 460 1306 462 1314 475 C1323 492 1305 511 1280 527 Z" fill="#FCF0EB" stroke="#CA7668" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="1280" y="571" font-size="32" fill="#203644" font-weight="700" text-anchor="middle" id="label-0196">Cellular cross-talk</text>
+    <line x1="1083" y1="592" x2="1477" y2="592" stroke="#DDE6E5" stroke-width="1.5" stroke-linecap="round" />
+    <text x="1280" y="631" font-size="26" fill="#CA7668" font-weight="700" text-anchor="middle" id="label-0198">Macrophage → fibroblast</text>
+    <text x="1280" y="666" font-size="23" fill="#203644" text-anchor="middle" id="label-0199">CCL24 / HB-EGF promote activation</text>
+    <a href="https://doi.org/10.1161/CIRCRESAHA.125.326599" target="_blank" aria-label="Reference 13: Parthiban et al. (2025). Macrophage-Derived CCL24 Promotes Cardiac Fibrosis Via Fibroblast CCR3" xlink:href="https://doi.org/10.1161/CIRCRESAHA.125.326599">
+      <title>[13] Parthiban et al. (2025). Macrophage-Derived CCL24 Promotes Cardiac Fibrosis Via Fibroblast CCR3. Circulation Research. DOI: 10.1161/CIRCRESAHA.125.326599</title>
+      <rect x="1245" y="675" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="1260" y="695.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0203">13</text>
+    </a>
+    <a href="https://doi.org/10.1038/s41467-023-43003-w" target="_blank" aria-label="Reference 14: Shumliakivska et al. (2024). DNMT3A clonal hematopoiesis-driver mutations induce cardiac fibrosis by paracrine activation of fibroblasts" xlink:href="https://doi.org/10.1038/s41467-023-43003-w">
+      <title>[14] Shumliakivska et al. (2024). DNMT3A clonal hematopoiesis-driver mutations induce cardiac fibrosis by paracrine activation of fibroblasts. Nature Communications. DOI: 10.1038/s41467-023-43003-w</title>
+      <rect x="1280" y="675" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="1295" y="695.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0207">14</text>
+    </a>
+    <line x1="1083" y1="716" x2="1477" y2="716" stroke="#DDE6E5" stroke-width="1.5" stroke-linecap="round" />
+    <text x="1280" y="754" font-size="26" fill="#115D56" font-weight="700" text-anchor="middle" id="label-0209">Cardiomyocyte → endothelium</text>
+    <text x="1280" y="789" font-size="22" fill="#203644" text-anchor="middle" id="label-0210">ZEB2–TMSB4 / PTMA supports vessel growth</text>
+    <a href="https://doi.org/10.1038/s41467-020-20361-3" target="_blank" aria-label="Reference 12: Gladka et al. (2021). Cardiomyocytes stimulate angiogenesis after ischemic injury in a ZEB2-dependent manner" xlink:href="https://doi.org/10.1038/s41467-020-20361-3">
+      <title>[12] Gladka et al. (2021). Cardiomyocytes stimulate angiogenesis after ischemic injury in a ZEB2-dependent manner. Nature Communications. DOI: 10.1038/s41467-020-20361-3</title>
+      <rect x="1265" y="798" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="1280" y="818.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0214">12</text>
+    </a>
+    <line x1="1083" y1="839" x2="1477" y2="839" stroke="#DDE6E5" stroke-width="1.5" stroke-linecap="round" />
+    <text x="1280" y="878" font-size="26" fill="#796398" font-weight="700" text-anchor="middle" id="label-0216">Cardiomyocyte ↔ fibroblast</text>
+    <text x="1280" y="913" font-size="21" fill="#203644" text-anchor="middle" id="label-0217">EV miR-24 restrains fibroblast activation;</text>
+    <text x="1280" y="941" font-size="21" fill="#203644" text-anchor="middle" id="label-0218">FB HTRA3 limits extracellular TGF-β.</text>
+    <a href="https://doi.org/10.1093/cvr/cvae243" target="_blank" aria-label="Reference 11: Senesi et al. (2025). miR-24-3p secreted as extracellular vesicle cargo by cardiomyocytes inhibits fibrosis in human cardiac microtissues" xlink:href="https://doi.org/10.1093/cvr/cvae243">
+      <title>[11] Senesi et al. (2025). miR-24-3p secreted as extracellular vesicle cargo by cardiomyocytes inhibits fibrosis in human cardiac microtissues. Cardiovascular Research. DOI: 10.1093/cvr/cvae243</title>
+      <rect x="1245" y="953" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="1260" y="973.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0222">11</text>
+    </a>
+    <a href="https://doi.org/10.1038/s41467-022-30630-y" target="_blank" aria-label="Reference 15: Ko et al. (2022). Cardiac fibroblasts regulate the development of heart failure via Htra3-TGF-β-IGFBP7 axis" xlink:href="https://doi.org/10.1038/s41467-022-30630-y">
+      <title>[15] Ko et al. (2022). Cardiac fibroblasts regulate the development of heart failure via Htra3-TGF-β-IGFBP7 axis. Nature Communications. DOI: 10.1038/s41467-022-30630-y</title>
+      <rect x="1280" y="953" width="30" height="28" rx="8" fill="#F4F7F7" stroke="#DCE5E5" class="ref-bg" />
+      <text x="1295" y="973.5" font-size="17" fill="#52636C" font-weight="700" text-anchor="middle" id="label-0226">15</text>
+    </a>
+  </g>
+  <rect x="48" y="1210" width="2464" height="112" rx="20" fill="#E8F4F0" />
+  <text x="1280" y="1256" font-size="36" fill="#115D56" font-weight="700" text-anchor="middle" id="label-0228">Fibrosis is a multicellular response.</text>
+  <text x="1280" y="1296" font-size="27" fill="#203644" text-anchor="middle" id="label-0229">Cell state, tissue location and timing shape the balance between effective repair and persistent remodeling.</text>
+  <line x1="48" y1="1350" x2="2512" y2="1350" stroke="#CCD9D3" stroke-width="1.5" stroke-linecap="round" />
+  <text x="48" y="1385" font-size="20" fill="#5D6D76" text-anchor="start" id="label-0231">Selected findings from the supplied cell-type and interaction tables; evidence spans human observations, cell models and animal perturbations.</text>
+  <text x="48" y="1418" font-size="19" fill="#5D6D76" text-anchor="start" id="label-0232">CM: cardiomyocyte; FB: fibroblast; EC: endothelial cell; ECM: extracellular matrix; EV: extracellular vesicle.</text>
+  <text x="2512" y="1385" font-size="20" fill="#115D56" font-weight="700" text-anchor="end" id="label-0233">Numbered references are clickable</text>
+  <text x="2512" y="1418" font-size="19" fill="#5D6D76" text-anchor="end" id="label-0234">Hover for paper details</text>
+</svg>
